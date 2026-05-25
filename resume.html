@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amit Seth - Resume</title>
+  <style>
+    /* CSS for ATS-friendly standard resume, highly printable */
+    body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #111; line-height: 1.5; margin: 0; padding: 0; background-color: #f4f4f9; }
+    .resume-container { max-width: 800px; margin: 40px auto; padding: 50px; background: #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.1); border-radius: 8px; }
+    @media print {
+      body { background: #fff; }
+      .resume-container { box-shadow: none; margin: 0; padding: 0; max-width: 100%; border-radius: 0; }
+      .no-print { display: none !important; }
+    }
+    h1 { font-size: 26pt; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1.5px; color: #000; text-align: center; }
+    .contact-info { text-align: center; font-size: 10.5pt; margin-bottom: 25px; color: #333; }
+    .contact-info a { color: #0056b3; text-decoration: none; }
+    h2 { font-size: 14pt; border-bottom: 1.5px solid #000; text-transform: uppercase; margin-top: 25px; padding-bottom: 3px; color: #000; letter-spacing: 0.5px; }
+    .section-content { margin-top: 10px; }
+    .item-header { display: flex; justify-content: space-between; font-weight: bold; margin-bottom: 2px; font-size: 11pt; color: #000; }
+    .item-sub { display: flex; justify-content: space-between; font-style: italic; font-size: 10.5pt; margin-bottom: 5px; color: #444; }
+    ul { margin: 0 0 15px 0; padding-left: 20px; }
+    li { font-size: 10.5pt; margin-bottom: 5px; color: #222; }
+    .skills-list { font-size: 10.5pt; line-height: 1.8; margin-bottom: 15px; }
+    .skills-list strong { color: #000; }
+    
+    /* Top Bar for Web View */
+    .top-bar { text-align: center; padding: 20px; background: #0a0f1d; border-bottom: 2px solid #00f0ff; position: sticky; top: 0; z-index: 100; display: flex; justify-content: center; gap: 15px; }
+    .btn { display: inline-block; padding: 10px 20px; font-size: 14px; font-weight: bold; text-decoration: none; border-radius: 6px; cursor: pointer; transition: all 0.3s ease; }
+    .btn-primary { background: #00f0ff; color: #0a0f1d; border: none; }
+    .btn-primary:hover { background: #00c0cc; transform: translateY(-2px); }
+    .btn-secondary { background: transparent; color: #00f0ff; border: 1px solid #00f0ff; }
+    .btn-secondary:hover { background: rgba(0, 240, 255, 0.1); }
+  </style>
+</head>
+<body>
+
+  <!-- Controls for web view, hidden during print -->
+  <div class="no-print top-bar">
+    <a href="index.html" class="btn btn-secondary">&larr; Back to Portfolio</a>
+    <button class="btn btn-primary" onclick="window.print()">Download as PDF</button>
+  </div>
+
+  <div class="resume-container">
+    <h1>Amit Seth</h1>
+    <div class="contact-info">
+      <a href="mailto:aseth230@gmail.com">aseth230@gmail.com</a> &nbsp;|&nbsp; 
+      +91 8966999725 &nbsp;|&nbsp; 
+      <a href="https://www.linkedin.com/in/amit-seth-2609as" target="_blank">linkedin.com/in/amit-seth-2609as</a> &nbsp;|&nbsp; 
+      <a href="https://github.com/Amyseth" target="_blank">github.com/Amyseth</a>
+    </div>
+
+    <h2>Technical Skills</h2>
+    <div class="section-content skills-list">
+      <strong>Languages:</strong> JavaScript (ES6+), HTML5, CSS3, Python, SQL<br>
+      <strong>Frameworks/Libraries:</strong> React, Next.js, Node.js, FastAPI, Bootstrap, Tailwind CSS<br>
+      <strong>Tools & Concepts:</strong> Git, GitHub, RESTful APIs, Reinforcement Learning (Q-Learning), Agile Methodology, UI/UX Principles<br>
+    </div>
+
+    <h2>Experience</h2>
+    <div class="section-content">
+      <div class="item-header">
+        <span>Kapil IT</span>
+        <span>Hyderabad, India</span>
+      </div>
+      <div class="item-sub">
+        <span>Front-End Developer Intern</span>
+        <span>Feb 2024 &ndash; Aug 2024</span>
+      </div>
+      <ul>
+        <li>Developed and optimized responsive, interactive user interfaces using modern web technologies, significantly improving cross-device accessibility and layout performance.</li>
+        <li>Collaborated with engineering teams to integrate front-end logic with RESTful backend APIs, ensuring robust data handling and seamless user experiences.</li>
+        <li>Maintained enterprise-level codebases by participating in daily stand-ups, code reviews, and strictly adhering to clean code architecture and agile workflows.</li>
+      </ul>
+    </div>
+
+    <h2>Projects</h2>
+    <div class="section-content">
+      <div class="item-header">
+        <span>Solar Sales Accelerator (AI & SaaS)</span>
+        <span>Next.js, Python, FastAPI</span>
+      </div>
+      <ul>
+        <li>Engineered a cloud-based platform that calculates solar yield ROI metrics and dynamically generates personalized AI-driven sales proposals for prospects.</li>
+        <li>Designed a responsive Next.js frontend integrated with a Python FastAPI backend containing complex estimation algorithms, reducing quote generation time by over 90%.</li>
+      </ul>
+
+      <div class="item-header">
+        <span>Hotel Management SaaS</span>
+        <span>Full-Stack Web</span>
+      </div>
+      <ul>
+        <li>Developed a robust hospitality suite featuring a live-updating reservation room grid, dynamic occupancy indicators, and comprehensive financial analytics.</li>
+        <li>Eliminated unscheduled double bookings by implementing real-time state management and optimized database querying for handling seasonal occupancy loads.</li>
+      </ul>
+
+      <div class="item-header">
+        <span>OptiMail RL AI Engine</span>
+        <span>Python, Reinforcement Learning</span>
+      </div>
+      <ul>
+        <li>Deployed a reinforcement learning (Q-learning) engine that dynamically tracks client click behaviors to optimize email marketing campaigns iteratively.</li>
+        <li>Automated the A/B testing process by allowing the AI model to refine subject lines and sending times dynamically, maximizing overall open and click-through rates.</li>
+      </ul>
+
+      <div class="item-header">
+        <span>Legal Consultancy Portal</span>
+        <span>Full-Stack Web</span>
+      </div>
+      <ul>
+        <li>Designed a highly secure virtual workspace for legal advisors handling sensitive client data, explicitly bypassing vulnerable third-party tracking scripts.</li>
+        <li>Implemented secure video scheduling modules, encrypted document storage vaults, and an automated invoice processing system to streamline law firm operations.</li>
+      </ul>
+    </div>
+
+    <h2>Education</h2>
+    <div class="section-content">
+      <div class="item-header">
+        <span>Pt. Ravishankar Shukla University</span>
+        <span>Raipur, India</span>
+      </div>
+      <div class="item-sub">
+        <span>Master of Science (M.Sc.) in Information Technology</span>
+        <span>2022 &ndash; 2024</span>
+      </div>
+      <ul>
+        <li>Focused on advanced software systems, database engineering, and modern full-stack architectures.</li>
+      </ul>
+      
+      <div class="item-header">
+        <span>Pt. Ravishankar Shukla University</span>
+        <span>Raipur, India</span>
+      </div>
+      <div class="item-sub">
+        <span>Bachelor of Science (B.Sc.) in Computer Science</span>
+        <span>2019 &ndash; 2022</span>
+      </div>
+      <ul>
+        <li>Acquired strong fundamentals in data structures, computer networks, database management systems, and object-oriented programming (OOP).</li>
+      </ul>
+    </div>
+
+  </div>
+</body>
+</html>
