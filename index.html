@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional Full-Stack Developer & SaaS Solutions Architect Portfolio. Showcasing premium web applications, bespoke SaaS products, and state-of-the-art software systems.">
+  <meta name="keywords" content="Full-Stack Developer, SaaS Architect, Portfolio, Web Developer, Hotel Management SaaS, Legal Consultancy Web, HTML, CSS, JavaScript, Web Applications">
+  <meta name="author" content="Amit Seth">
+  <meta property="og:title" content="Amit Seth | Full-Stack Developer & SaaS Architect">
+  <meta property="og:description" content="Explore state-of-the-art web applications, SaaS platforms, and digital products tailored for ultimate performance and modern aesthetics.">
+  <meta property="og:image" content="assets/avatar.png">
+  <meta property="og:type" content="website">
+  
+  <title>Amit Seth | Full-Stack Developer & SaaS Architect</title>
+  
+  <!-- Preconnecting Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+  <!-- Glowing Background Blobs -->
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+  <div class="grid-overlay"></div>
+
+  <!-- Custom Cursor Followers -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- Header Navigation -->
+  <header id="header">
+    <div class="nav-container">
+      <a href="#hero" class="logo">
+        <span class="logo-accent">&lt;</span>Amit<span class="logo-accent">.Seth /&gt;</span>
+      </a>
+      
+      <nav class="nav-menu" id="navMenu">
+        <ul>
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#experience" class="nav-link">Timeline</a></li>
+          <li><a href="#projects" class="nav-link">Work</a></li>
+          <li><a href="#templates" class="nav-link">Templates</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="themeToggle" class="theme-btn" aria-label="Toggle Theme">
+          <i class="fa-solid fa-moon moon-icon"></i>
+          <i class="fa-solid fa-sun sun-icon"></i>
+        </button>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge-dot"></span> Available for Freelance & Remote Work
+          </div>
+          <h1 class="hero-title">
+            Hi, I'm <span class="text-gradient">Amit Seth</span>
+          </h1>
+          <h2 class="hero-subtitle">
+            <span id="typing-text"></span><span class="cursor-blink">|</span>
+          </h2>
+          <p class="hero-description">
+            I craft high-performance web applications, robust SaaS solutions, and sleek digital experiences. Specializing in turning complex ideas into stunning, state-of-the-art products.
+          </p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              <span>View Projects</span> <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <span>Let's Collaborate</span>
+            </a>
+          </div>
+          <div class="social-links">
+            <a href="https://github.com/Amyseth" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/amit-seth-2609as" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="mailto:aseth230@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="image-wrapper">
+            <img src="assets/avatar.png" alt="Amit Seth - Developer Portrait" class="avatar-img">
+            <div class="glowing-ring"></div>
+            <!-- Floating Cards -->
+            <div class="floating-card card-1 glass-panel">
+              <i class="fa-solid fa-code text-gradient-teal"></i>
+              <div>
+                <h4>React & Node.js</h4>
+                <p>Full-Stack Mastery</p>
+              </div>
+            </div>
+            <div class="floating-card card-2 glass-panel">
+              <i class="fa-solid fa-database text-gradient-purple"></i>
+              <div>
+                <h4>Database Architecture</h4>
+                <p>Highly Optimized Systems</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-indicator">
+        <a href="#skills" aria-label="Scroll Down">
+          <span class="mouse-icon"><span class="mouse-wheel"></span></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+      <div class="container stats-grid">
+        <div class="stat-card glass-panel">
+          <h3 class="stat-number text-gradient" data-target="5">0</h3>
+          <p class="stat-label">Bespoke SaaS Projects</p>
+        </div>
+        <div class="stat-card glass-panel">
+          <h3 class="stat-number text-gradient" data-target="2">0</h3>
+          <p class="stat-label">Enterprise Clients</p>
+        </div>
+        <div class="stat-card glass-panel">
+          <h3 class="stat-number text-gradient" data-target="15000">0</h3>
+          <p class="stat-label">Lines of Clean Code</p>
+        </div>
+        <div class="stat-card glass-panel">
+          <h3 class="stat-number text-gradient" data-target="100">0</h3>
+          <p class="stat-label">% Uptime Delivered</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Matrix Section -->
+    <section id="skills" class="skills-section section-padding">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="subheading">Technical Expertise</span>
+          <h2 class="section-title">My Skills Matrix</h2>
+          <div class="title-divider"></div>
+          <p class="section-description">A curated breakdown of my development, architecture, and design toolkit.</p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Card 1: Frontend -->
+          <div class="skills-card glass-panel">
+            <div class="card-icon"><i class="fa-solid fa-laptop-code text-gradient-teal"></i></div>
+            <h3>Frontend Artistry</h3>
+            <p>Creating highly responsive, interactive, and visually striking user interfaces.</p>
+            <div class="skills-list">
+              <div class="skill-item">
+                <span class="skill-name">HTML5 / CSS3 / ES6+</span>
+                <span class="skill-percentage">95%</span>
+                <div class="skill-bar"><div class="skill-progress" style="width: 95%"></div></div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">React / Next.js / Vue</span>
+                <span class="skill-percentage">90%</span>
+                <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">Vanilla CSS & TailWind</span>
+                <span class="skill-percentage">92%</span>
+                <div class="skill-bar"><div class="skill-progress" style="width: 92%"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Backend -->
+          <div class="skills-card glass-panel">
+            <div class="card-icon"><i class="fa-solid fa-server text-gradient-purple"></i></div>
+            <h3>Backend & Database</h3>
+            <p>Designing scaleable server frameworks, APIs, and bulletproof security protocols.</p>
+            <div class="skills-list">
+              <div class="skill-item">
+                <span class="skill-name">Node.js / Express</span>
+                <span class="skill-percentage">93%</span>
+                <div class="skill-bar"><div class="skill-progress" style="width: 93%"></div></div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">PostgreSQL / MongoDB</span>
+                <span class="skill-percentage">88%</span>
+                <div class="skill-bar"><div class="skill-progress" style="width: 88%"></div></div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">RESTful APIs & GraphQL</span>
+                <span class="skill-percentage">91%</span>
+                <div class="skill-bar"><div class="skill-progress" style="width: 91%"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Cloud & SaaS -->
+          <div class="skills-card glass-panel">
+            <div class="card-icon"><i class="fa-solid fa-cloud text-gradient-teal"></i></div>
+            <h3>SaaS & DevOps</h3>
+            <p>Architecting cloud architecture, database operations, and continuous integrations.</p>
+            <div class="skills-list">
+              <div class="skill-item">
+                <span class="skill-name">Docker / Containerization</span>
+                <span class="skill-percentage">85%</span>
+                <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">AWS / Firebase / Vercel</span>
+                <span class="skill-percentage">89%</span>
+                <div class="skill-bar"><div class="skill-progress" style="width: 89%"></div></div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">CI/CD & Git Workflows</span>
+                <span class="skill-percentage">90%</span>
+                <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience & Education Timeline -->
+    <section id="experience" class="timeline-section section-padding">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="subheading">My Journey</span>
+          <h2 class="section-title">Timeline of Growth</h2>
+          <div class="title-divider"></div>
+          <p class="section-description">A chronicle of my academic education and professional client engagements.</p>
+        </div>
+
+        <div class="timeline">
+          <!-- Timeline Line -->
+          <div class="timeline-line"></div>
+
+          <!-- Item 1: Client work (SaaS Developer) -->
+          <div class="timeline-item left">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-panel">
+              <span class="timeline-date"><i class="fa-solid fa-calendar-days"></i> 2025 - Present</span>
+              <h3>Lead SaaS Provider</h3>
+              <h4 class="timeline-org">Freelance / Independent Contractor</h4>
+              <p>Designed, deployed, and scaled full-featured web platforms for custom businesses. Delivered comprehensive dashboards, booking services, and scheduling architectures.</p>
+              <div class="timeline-tags">
+                <span class="tag">Full-Stack Development</span>
+                <span class="tag">SaaS Architecture</span>
+                <span class="tag">Client Consultation</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2: Legal Consultancy Project -->
+          <div class="timeline-item right">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-panel">
+              <span class="timeline-date"><i class="fa-solid fa-calendar-days"></i> Q3 - Q4 2025</span>
+              <h3>Legal Consultancy Platform</h3>
+              <h4 class="timeline-org">Client Project</h4>
+              <p>Designed a secure portal for legal advisors. Integrated secure scheduling, encrypted document storage vaults, client messaging channels, and legal invoice automation.</p>
+              <div class="timeline-tags">
+                <span class="tag">Security Vaults</span>
+                <span class="tag">Appointment Scheduling</span>
+                <span class="tag">Automated Invoicing</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3: Hotel Management SaaS Project -->
+          <div class="timeline-item left">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-panel">
+              <span class="timeline-date"><i class="fa-solid fa-calendar-days"></i> Q1 - Q2 2025</span>
+              <h3>Hotel Management Platform</h3>
+              <h4 class="timeline-org">Client Project</h4>
+              <p>Built a high-performance hospitality suite featuring a live-updating reservation room grid, dynamic occupancy indicators, payment processing, and comprehensive financial reports.</p>
+              <div class="timeline-tags">
+                <span class="tag">Real-Time Grid</span>
+                <span class="tag">Stripe Billing</span>
+                <span class="tag">Data Analytics</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4: Postgraduate Master's Degree -->
+          <div class="timeline-item right">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-panel">
+              <span class="timeline-date"><i class="fa-solid fa-calendar-days"></i> 2022 - 2024</span>
+              <h3>M.Sc. in Information Technology</h3>
+              <h4 class="timeline-org">Pt. Ravishankar Shukla University, Raipur</h4>
+              <p>Completed Master's degree focusing on advanced software systems, database engineering, and full-stack architecture. Includes a comprehensive <strong>6-month professional internship in Hyderabad</strong> building enterprise web platforms.</p>
+              <div class="timeline-tags">
+                <span class="tag">Advanced IT Systems</span>
+                <span class="tag">System Design</span>
+                <span class="tag">Hyderabad Internship</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 5: Undergraduate Bachelor's Degree -->
+          <div class="timeline-item left">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-panel">
+              <span class="timeline-date"><i class="fa-solid fa-calendar-days"></i> 2019 - 2021</span>
+              <h3>B.Sc. in Computer Science</h3>
+              <h4 class="timeline-org">Technical University</h4>
+              <p>Graduated with honors, establishing core fundamentals in data structures, design patterns, computer networks, database systems, and object-oriented programming.</p>
+              <div class="timeline-tags">
+                <span class="tag">Data Structures</span>
+                <span class="tag">Database Design</span>
+                <span class="tag">Algorithms</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section section-padding">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="subheading">Showcase</span>
+          <h2 class="section-title">Client Case Studies</h2>
+          <div class="title-divider"></div>
+          <p class="section-description">Deep dives into fully completed, high-performance web products deployed for active businesses.</p>
+        </div>
+
+        <!-- Project Filters -->
+        <div class="project-filters">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="saas">SaaS Solutions</button>
+          <button class="filter-btn" data-filter="fullstack">Full-Stack Web</button>
+          <button class="filter-btn" data-filter="design">Premium UI</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid">
+          <!-- Project 1: Hotel Management SaaS -->
+          <div class="project-card glass-panel" data-category="saas fullstack">
+            <div class="project-image">
+              <img src="assets/hotel.png" alt="Hotel Management SaaS Dashboard Preview">
+              <div class="project-overlay">
+                <a href="#" class="view-case-study" data-project="hotel">
+                  <span>Explore Case Study</span> <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            <div class="project-info">
+              <span class="project-type">SaaS Platform</span>
+              <h3>Hotel Management Suite</h3>
+              <p>A cloud hospitality package featuring live booking grids, room status charts, analytics, and billing modules.</p>
+              <div class="project-tags">
+                <span class="tag">HTML/CSS</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">LocalStore</span>
+                <span class="tag">Analytics</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: Legal Consultancy Platform -->
+          <div class="project-card glass-panel" data-category="fullstack design">
+            <div class="project-image">
+              <img src="assets/legal.png" alt="Legal Consultancy Platform Preview">
+              <div class="project-overlay">
+                <a href="#" class="view-case-study" data-project="legal">
+                  <span>Explore Case Study</span> <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            <div class="project-info">
+              <span class="project-type">Web Portal</span>
+              <h3>Legal Consultancy Platform</h3>
+              <p>A secure virtual workplace for expert lawyers, integrating video schedulers and document storage boxes.</p>
+              <div class="project-tags">
+                <span class="tag">CSS Grid</span>
+                <span class="tag">Crypto Storage</span>
+                <span class="tag">Auth Modules</span>
+                <span class="tag">Responsive</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: Solar Sales Accelerator -->
+          <div class="project-card glass-panel" data-category="saas design">
+            <div class="project-image">
+              <img src="assets/solar.png" alt="Solar Sales Accelerator Preview">
+              <div class="project-overlay">
+                <a href="#" class="view-case-study" data-project="solar">
+                  <span>Explore Upcoming Project</span> <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            <div class="project-info">
+              <span class="project-type" style="color: #fbbf24; text-shadow: 0 0 10px rgba(251,191,36,0.3);"><i class="fa-solid fa-clock-rotate-left"></i> Active / Upcoming Project</span>
+              <h3>Solar Sales Accelerator</h3>
+              <p>An AI-powered sales engine that calculates solar ROI metrics (payback, panels, costs) and generates persuasive, personalized pitches for prospects.</p>
+              <div class="project-tags">
+                <span class="tag" style="background-color: rgba(251,191,36,0.06); border-color: rgba(251,191,36,0.15); color: #fbbf24;">Next.js</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">Gemini AI</span>
+                <span class="tag">Framer Motion</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4: OptiMail RL -->
+          <div class="project-card glass-panel" data-category="saas fullstack">
+            <div class="project-image">
+              <img src="assets/email.png" alt="OptiMail RL AI Dashboard Preview">
+              <div class="project-overlay">
+                <a href="#" class="view-case-study" data-project="email">
+                  <span>Explore Case Study</span> <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            <div class="project-info">
+              <span class="project-type">AI Campaign Suite</span>
+              <h3>OptiMail RL AI Engine</h3>
+              <p>A deployed reinforcement learning (Q-learning) email optimizer designed to automatically generate high-converting campaigns.</p>
+              <div class="project-tags">
+                <span class="tag">Q-Learning AI</span>
+                <span class="tag">Node.js API</span>
+                <span class="tag">Campaign Grids</span>
+                <span class="tag">Deployed</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Templates Teaser Section -->
+    <section id="templates" class="templates-section section-padding">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="subheading">Product Marketplace</span>
+          <h2 class="section-title">Developer Templates</h2>
+          <div class="title-divider"></div>
+          <p class="section-description">A sneak peek at high-quality digital layouts and boilerplates launching soon.</p>
+        </div>
+
+        <div class="templates-grid">
+          <!-- Template 1: SaaS Launch Boilerplate -->
+          <div class="template-card glass-panel">
+            <div class="template-badge">Coming Soon</div>
+            <div class="template-preview">
+              <div class="code-header">
+                <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                <span class="code-title">saas-landing-index.css</span>
+              </div>
+              <pre><code>:root {
+  --primary: #00f2fe;
+  --bg: #0a0f1d;
+  --glass: rgba(13,20,38,0.6);
+}
+.hero {
+  display: flex;
+  backdrop-filter: blur(16px);
+}</code></pre>
+            </div>
+            <div class="template-info">
+              <h3>SaaS Launch Boilerplate</h3>
+              <p>Fully optimized responsive HTML & CSS boilerplate for product launches. Pre-configured clean landing, pricing plans, and contact states.</p>
+              <div class="template-price">
+                <span class="original-price">₹4,199</span> <span class="current-price">₹2,499</span> <span class="badge-pre">Pre-Order Offer</span>
+              </div>
+              <button class="btn btn-secondary btn-full pre-order-btn" data-template="SaaS Launch Boilerplate">Pre-Order Template</button>
+            </div>
+          </div>
+
+          <!-- Template 2: Custom Dashboard Kit -->
+          <div class="template-card glass-panel">
+            <div class="template-badge">Coming Soon</div>
+            <div class="template-preview">
+              <div class="code-header">
+                <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                <span class="code-title">dashboard-grid.js</span>
+              </div>
+              <pre><code>function initCharts() {
+  const ctx = document.getElementById('salesChart');
+  return new Chart(ctx, {
+    type: 'line',
+    data: chartData,
+    options: premiumConfig
+  });
+}</code></pre>
+            </div>
+            <div class="template-info">
+              <h3>Interactive Admin Dashboard</h3>
+              <p>Visual UI layout package featuring modular grids, responsive sidebar navigation, interactive statistics widgets, and responsive dark themes.</p>
+              <div class="template-price">
+                <span class="original-price">₹3,299</span> <span class="current-price">₹1,599</span> <span class="badge-pre">Pre-Order Offer</span>
+              </div>
+              <button class="btn btn-secondary btn-full pre-order-btn" data-template="Interactive Admin Dashboard">Pre-Order Template</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Glassmorphic Contact Section -->
+    <section id="contact" class="contact-section section-padding">
+      <div class="container contact-grid">
+        <div class="contact-info">
+          <span class="subheading">Get In Touch</span>
+          <h2 class="section-title">Let's Craft Something Magnificent Together</h2>
+          <div class="title-divider left"></div>
+          <p class="contact-desc">
+            Seeking a bespoke high-end SaaS application, a corporate website, or a top-tier freelancer to reinforce your engineering department? Send a inquiry directly.
+          </p>
+
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="item-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div>
+                <h4>Location</h4>
+                <p>Available Remotely (GMT+5:30 / UTC)</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="item-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div>
+                <h4>Direct Email</h4>
+                <p><a href="mailto:aseth230@gmail.com">aseth230@gmail.com</a></p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="item-icon"><i class="fa-solid fa-clock"></i></div>
+              <div>
+                <h4>Working Hours</h4>
+                <p>Monday - Friday, 9:00 AM - 6:00 PM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-panel glass-panel">
+          <form id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="clientName">Full Name <span class="required">*</span></label>
+                <div class="input-wrapper">
+                  <i class="fa-regular fa-user input-icon"></i>
+                  <input type="text" id="clientName" name="clientName" placeholder="John Doe" required>
+                </div>
+                <span class="error-msg" id="nameError">Name is required.</span>
+              </div>
+              <div class="form-group">
+                <label for="clientEmail">Email Address <span class="required">*</span></label>
+                <div class="input-wrapper">
+                  <i class="fa-regular fa-envelope input-icon"></i>
+                  <input type="email" id="clientEmail" name="clientEmail" placeholder="john@example.com" required>
+                </div>
+                <span class="error-msg" id="emailError">Please enter a valid email.</span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="projectType">What project are you looking for?</label>
+              <div class="input-wrapper">
+                <i class="fa-solid fa-laptop-code input-icon"></i>
+                <select id="projectType" name="projectType">
+                  <option value="saas">Custom SaaS Application</option>
+                  <option value="website">Enterprise Website</option>
+                  <option value="software">Desktop/Mobile Software</option>
+                  <option value="consultancy">Development Consultancy</option>
+                  <option value="other">Other Inquiry</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="clientMessage">Project Details / Message <span class="required">*</span></label>
+              <div class="input-wrapper textarea-wrapper">
+                <i class="fa-regular fa-comment input-icon"></i>
+                <textarea id="clientMessage" name="clientMessage" rows="5" placeholder="Tell me about your project scope, deadlines, and features..." required></textarea>
+              </div>
+              <span class="error-msg" id="messageError">Message details are required.</span>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+              <span>Transmit Message</span> <i class="fa-regular fa-paper-plane"></i>
+            </button>
+          </form>
+
+          <!-- Success Box -->
+          <div class="form-success-box" id="successBox">
+            <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+            <h3>Transmission Successful!</h3>
+            <p>Your message has been securely recorded locally. I will get back to you within 24 hours.</p>
+            <div class="success-actions">
+              <button class="btn btn-secondary btn-sm" id="exportLeadsBtn">
+                <i class="fa-solid fa-download"></i> Download Copy
+              </button>
+              <button class="btn btn-primary btn-sm" id="resetFormBtn">
+                Send Another Message
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-content">
+      <p class="copyright">&copy; 2026 Amit Seth. All Rights Reserved. Crafted with pure CSS & Passion.</p>
+      <div class="footer-links">
+        <a href="#hero">Home</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Work</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Case Study Modals -->
+  <div class="modal-backdrop" id="modalBackdrop">
+    <!-- Hotel Modals -->
+    <div class="modal-card glass-panel" id="hotelModal">
+      <button class="modal-close" aria-label="Close Case Study">&times;</button>
+      <div class="modal-header-hero" style="background-image: linear-gradient(rgba(10,15,29,0.7), rgba(10,15,29,0.95)), url('assets/hotel.png');">
+        <span class="project-type">Case Study</span>
+        <h2>Hotel Management SaaS</h2>
+      </div>
+      <div class="modal-body">
+        <div class="modal-meta-grid">
+          <div class="meta-item"><strong>Client:</strong> Grand Resort & Suites</div>
+          <div class="meta-item"><strong>Duration:</strong> 4 Months</div>
+          <div class="meta-item"><strong>Services:</strong> Full-Stack SaaS / Grid UX</div>
+          <div class="meta-item"><strong>Tech Stack:</strong> HTML5, CSS Grid, Vanilla JS, LocalStorage</div>
+        </div>
+        <div class="modal-rich-text">
+          <h3>The Challenge</h3>
+          <p>The client struggled with slow offline check-in books, unscheduled double room bookings, and zero real-time statistics on seasonal occupancy levels. They required an interactive, instant booking interface that room managers could control efficiently.</p>
+          
+          <h3>The Solution</h3>
+          <p>We developed a modern SaaS application displaying a live-updating grid of hotel occupancy levels. Features included:</p>
+          <ul>
+            <li><strong>Live Interactive Room Grid:</strong> Instantly check-in or reserve rooms across multiple floors by clicking visual cells.</li>
+            <li><strong>Intelligent Occupancy Status Indicator:</strong> Interactive cards updating real-time ratios (Vacant, Occupied, Cleaning).</li>
+            <li><strong>Detailed Financial Analytics:</strong> Visual widgets tracking gross earnings, cleaning timelines, and average room revenue.</li>
+            <li><strong>Integrated Local DB System:</strong> Keeping operations offline-first so that network slowdowns never block physical check-ins.</li>
+          </ul>
+
+          <h3>Impact & Metrics</h3>
+          <div class="impact-metrics-row">
+            <div class="metric-badge">
+              <span class="metric-num">35%</span>
+              <span class="metric-txt">Check-in Speedup</span>
+            </div>
+            <div class="metric-badge">
+              <span class="metric-num">0%</span>
+              <span class="metric-txt">Double Booking Errors</span>
+            </div>
+            <div class="metric-badge">
+              <span class="metric-num">99.9%</span>
+              <span class="metric-txt">Operational Uptime</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Legal Modals -->
+    <div class="modal-card glass-panel" id="legalModal">
+      <button class="modal-close" aria-label="Close Case Study">&times;</button>
+      <div class="modal-header-hero" style="background-image: linear-gradient(rgba(10,15,29,0.7), rgba(10,15,29,0.95)), url('assets/legal.png');">
+        <span class="project-type">Case Study</span>
+        <h2>Legal Consultancy Portal</h2>
+      </div>
+      <div class="modal-body">
+        <div class="modal-meta-grid">
+          <div class="meta-item"><strong>Client:</strong> Apex Legal Advisors</div>
+          <div class="meta-item"><strong>Duration:</strong> 3 Months</div>
+          <div class="meta-item"><strong>Services:</strong> Web Architecture / Encrypted UI</div>
+          <div class="meta-item"><strong>Tech Stack:</strong> CSS Flexbox, Crypto API, JS Scheduler</div>
+        </div>
+        <div class="modal-rich-text">
+          <h3>The Challenge</h3>
+          <p>Law firms handle highly sensitive confidential client data. The client required a secure portal to scheduler virtual meetings, store legal contracts, and handle automated invoicing, bypassing third-party trackers.</p>
+          
+          <h3>The Solution</h3>
+          <p>We designed a high-end secure legal consultancy platform equipped with client authorization structures. Core components included:</p>
+          <ul>
+            <li><strong>Encrypted Vault Panel:</strong> Clients can drag-and-drop sensitive lawsuit paperwork which gets archived securely.</li>
+            <li><strong>Automated Advisor Scheduler:</strong> Intelligent time-block selector matching available case lawyers with clients.</li>
+            <li><strong>Dynamic Invoicing & Billing:</strong> Live calculations calculating billed consulting hours with simple invoice printing exports.</li>
+            <li><strong>Secure Client Communications:</strong> Direct consultation panels keeping conversations encrypted and highly responsive.</li>
+          </ul>
+
+          <h3>Impact & Metrics</h3>
+          <div class="impact-metrics-row">
+            <div class="metric-badge">
+              <span class="metric-num">100%</span>
+              <span class="metric-txt">Document Encryption</span>
+            </div>
+            <div class="metric-badge">
+              <span class="metric-num">25+</span>
+              <span class="metric-txt">Hours Saved Weekly</span>
+            </div>
+            <div class="metric-badge">
+              <span class="metric-num">4.9/5</span>
+              <span class="metric-txt">Client Portal Rating</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Solar Modals -->
+    <div class="modal-card glass-panel" id="solarModal">
+      <button class="modal-close" aria-label="Close Case Study">&times;</button>
+      <div class="modal-header-hero" style="background-image: linear-gradient(rgba(10,15,29,0.7), rgba(10,15,29,0.95)), url('assets/solar.png');">
+        <span class="project-type" style="color: #fbbf24; text-shadow: 0 0 10px rgba(251,191,36,0.3);"><i class="fa-solid fa-fire"></i> Active Development Status</span>
+        <h2>Solar Sales Accelerator</h2>
+      </div>
+      <div class="modal-body">
+        <div class="modal-meta-grid">
+          <div class="meta-item"><strong>Project Status:</strong> Under Deployed Beta Testing</div>
+          <div class="meta-item"><strong>Objective:</strong> 3x Solar Lead Closures</div>
+          <div class="meta-item"><strong>Services:</strong> Full-Stack AI Integration / ROI Algorithmic math</div>
+          <div class="meta-item"><strong>Tech Stack:</strong> Next.js App Router, TailwindCSS, FastAPI, Python, Gemini API</div>
+        </div>
+        <div class="modal-rich-text">
+          <h3>The Challenge & Goals</h3>
+          <p>Assessing solar yield efficiency and explaining returns on investment (ROI) is a major friction point for solar sales reps. Standard quotes take hours to compute and lack emotional sales arguments. Our goal is to build an instant proposal accelerator that calculates exact panel needs, financial payback timelines, and generates a personalized, highly persuasive AI sales pitch tailored directly to the prospect's profile.</p>
+          
+          <h3>Core System Architecture</h3>
+          <p>The deployed Next.js web client interfaces with a Python FastAPI server containing proprietary solar estimation formulas, featuring:</p>
+          <ul>
+            <li><strong>ROI Metric Engines:</strong> Computes panel dimensions, total installation pricing, and yearly paybacks based on monthly bills.</li>
+            <li><strong>Gemini AI Pitch Builder:</strong> Integrates custom LLM prompts to synthesize highly targeted sales presentations, including objection handling and financial benefits.</li>
+            <li><strong>Responsive Lead Vault:</strong> Capture name, phone, roof square-footage, and bills, displaying visual result metrics with clean Framer Motion fades.</li>
+            <li><strong>One-Click Clipboard:</strong> Direct exports allowing solar reps to instantly copy and text/email pitches directly to customers.</li>
+          </ul>
+
+          <h3>Core Target Metrics</h3>
+          <div class="impact-metrics-row">
+            <div class="metric-badge">
+              <span class="metric-num">3x</span>
+              <span class="metric-txt">Proposal Delivery Speed</span>
+            </div>
+            <div class="metric-badge">
+              <span class="metric-num">&lt;2s</span>
+              <span class="metric-txt">AI Response Latency</span>
+            </div>
+            <div class="metric-badge">
+              <span class="metric-num">95%</span>
+              <span class="metric-txt">Target Lead Engagement</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Email Optimizer Modals -->
+    <div class="modal-card glass-panel" id="emailModal">
+      <button class="modal-close" aria-label="Close Case Study">&times;</button>
+      <div class="modal-header-hero" style="background-image: linear-gradient(rgba(10,15,29,0.7), rgba(10,15,29,0.95)), url('assets/email.png');">
+        <span class="project-type">Case Study</span>
+        <h2>OptiMail RL AI Engine</h2>
+      </div>
+      <div class="modal-body">
+        <div class="modal-meta-grid">
+          <div class="meta-item"><strong>Project:</strong> AI Research & Deployment</div>
+          <div class="meta-item"><strong>Duration:</strong> 3 Months</div>
+          <div class="meta-item"><strong>Services:</strong> AI Reinforcement Loop / RESTful Dashboard</div>
+          <div class="meta-item"><strong>Tech Stack:</strong> Python, Q-Learning, Node.js API, HTML5/CSS3</div>
+        </div>
+        <div class="modal-rich-text">
+          <h3>The Challenge</h3>
+          <p>Email marketing campaigns often suffer from low click-through rates (CTR) due to static subject lines and timing. Standard A/B testing is slow. We wanted to build a deployed reinforcement learning engine that learns client click behaviors and refines subject lines dynamically.</p>
+          
+          <h3>The Solution</h3>
+          <p>We built a fully functional reinforcement learning (RL) campaign suite consisting of:</p>
+          <ul>
+            <li><strong>Deployed Q-Learning Engine:</strong> An intelligent agent adjusting subject line sentiment coefficients based on direct customer email opens and clicks.</li>
+            <li><strong>Live Performance Dashboard:</strong> A visual terminal displaying ongoing CTR metrics, reward curves, and sentiment vectors.</li>
+            <li><strong>Subject Line Multi-generator:</strong> An interactive UI letting users input keywords and see AI-scored CTR variations.</li>
+            <li><strong>Webhook Integrations:</strong> Real-time hooks capturing simulated clicks to train the RL agent in the background.</li>
+          </ul>
+
+          <h3>Impact & Metrics</h3>
+          <div class="impact-metrics-row">
+            <div class="metric-badge">
+              <span class="metric-num">+42%</span>
+              <span class="metric-txt">Click-Through Rate Boost</span>
+            </div>
+            <div class="metric-badge">
+              <span class="metric-num">50ms</span>
+              <span class="metric-txt">API Decision Time</span>
+            </div>
+            <div class="metric-badge">
+              <span class="metric-num">3x</span>
+              <span class="metric-txt">Faster Campaign Adapts</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
