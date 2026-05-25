@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FreshHarvest - Local Organic Grocer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #4caf50;
+      --primary-dark: #388e3c;
+      --accent: #ff9800;
+      --bg: #f9fbf9;
+      --text: #333;
+      --text-light: #666;
+      --white: #fff;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { background-color: var(--bg); color: var(--text); overflow-x: hidden; }
+    
+    h1, h2, h3 { font-family: 'Playfair Display', serif; color: #2c3e50; }
+
+    /* Header */
+    header { background: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.05); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
+    .logo { font-size: 26px; font-weight: 700; color: var(--primary); display: flex; align-items: center; gap: 8px; text-decoration: none; }
+    .logo i { font-size: 28px; }
+    nav ul { list-style: none; display: flex; gap: 30px; }
+    nav a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.3s; }
+    nav a:hover { color: var(--primary); }
+    .cart-btn { background: var(--primary); color: var(--white); border: none; padding: 10px 20px; border-radius: 30px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: background 0.3s; }
+    .cart-btn:hover { background: var(--primary-dark); }
+    .cart-badge { background: var(--accent); color: var(--white); font-size: 12px; padding: 2px 6px; border-radius: 50%; }
+
+    /* Hero */
+    .hero { background: linear-gradient(rgba(249, 251, 249, 0.8), rgba(249, 251, 249, 0.9)), url('https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover; padding: 120px 5%; text-align: center; }
+    .hero h1 { font-size: 56px; margin-bottom: 20px; color: #1b5e20; }
+    .hero p { font-size: 18px; color: var(--text-light); max-width: 600px; margin: 0 auto 30px; }
+    .hero .btn { background: var(--accent); color: var(--white); text-decoration: none; padding: 15px 35px; border-radius: 30px; font-size: 16px; font-weight: 600; display: inline-block; transition: transform 0.3s, box-shadow 0.3s; }
+    .hero .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(255, 152, 0, 0.3); }
+
+    /* Categories */
+    .categories { padding: 40px 5%; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: -40px; position: relative; z-index: 10; }
+    .category-card { background: var(--white); padding: 20px 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); display: flex; align-items: center; gap: 15px; cursor: pointer; transition: transform 0.3s; font-weight: 600; }
+    .category-card:hover { transform: translateY(-5px); color: var(--primary); }
+    .category-card i { font-size: 24px; color: var(--primary); }
+
+    /* Products */
+    .products-section { padding: 80px 5%; }
+    .section-header { text-align: center; margin-bottom: 50px; }
+    .section-header h2 { font-size: 36px; margin-bottom: 15px; }
+    .section-header p { color: var(--text-light); }
+    
+    .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 30px; }
+    .product-card { background: var(--white); border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: transform 0.3s; border: 1px solid #eee; position: relative; }
+    .product-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+    .product-badge { position: absolute; top: 15px; left: 15px; background: var(--accent); color: var(--white); font-size: 12px; font-weight: 600; padding: 4px 10px; border-radius: 20px; z-index: 2; }
+    
+    .product-img { height: 200px; background: #f5f5f5; display: flex; justify-content: center; align-items: center; font-size: 80px; position: relative; overflow: hidden; }
+    /* Using emojis as high-quality placeholders for demo purposes */
+    
+    .product-info { padding: 20px; }
+    .product-category { font-size: 12px; color: var(--primary); font-weight: 600; text-transform: uppercase; margin-bottom: 5px; }
+    .product-title { font-size: 18px; margin-bottom: 10px; font-family: 'Poppins', sans-serif; font-weight: 600; }
+    .product-price { font-size: 20px; font-weight: 700; color: var(--text); margin-bottom: 15px; }
+    .product-price span { font-size: 14px; color: var(--text-light); font-weight: 400; }
+    
+    .add-to-cart { width: 100%; background: transparent; border: 2px solid var(--primary); color: var(--primary); padding: 10px; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.3s; }
+    .add-to-cart:hover { background: var(--primary); color: var(--white); }
+
+    /* Features */
+    .farm-features { background: var(--primary); color: var(--white); padding: 60px 5%; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; text-align: center; }
+    .feature-icon { font-size: 40px; margin-bottom: 20px; color: #c8e6c9; }
+    .farm-features h3 { color: var(--white); margin-bottom: 10px; font-family: 'Poppins', sans-serif; font-size: 20px; }
+    .farm-features p { opacity: 0.9; font-size: 14px; }
+
+    /* Footer */
+    footer { background: #1a1a1a; color: #fff; padding: 60px 5% 30px; }
+    .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 40px; }
+    .footer-col h3 { color: #fff; font-family: 'Poppins', sans-serif; margin-bottom: 20px; font-size: 18px; }
+    .footer-col p, .footer-col a { color: #999; font-size: 14px; text-decoration: none; line-height: 1.8; display: block; }
+    .footer-col a:hover { color: var(--primary); }
+    .footer-bottom { text-align: center; padding-top: 30px; border-top: 1px solid #333; color: #666; font-size: 14px; }
+
+    /* Return Bar */
+    .return-bar { position: fixed; bottom: 30px; right: 30px; z-index: 1000; }
+    .btn-return { background: var(--text); border: none; padding: 12px 20px; border-radius: 30px; text-decoration: none; color: #fff; font-weight: 600; font-size: 14px; box-shadow: 0 10px 25px rgba(0,0,0,0.5); display: flex; align-items: center; gap: 10px; transition: all 0.3s; }
+    .btn-return:hover { background: var(--primary); transform: translateY(-3px); }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="#" class="logo"><i class="fa-solid fa-leaf"></i> FreshHarvest</a>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">Our Farm</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="cart-btn">
+      <i class="fa-solid fa-cart-shopping"></i> Cart <span class="cart-badge">3</span>
+    </button>
+  </header>
+
+  <section class="hero">
+    <h1>100% Organic & Locally Sourced</h1>
+    <p>Get farm-fresh vegetables and seasonal fruits delivered directly to your doorstep within 24 hours of harvesting.</p>
+    <a href="#shop" class="btn">Shop Fresh Now</a>
+  </section>
+
+  <div class="categories">
+    <div class="category-card"><i class="fa-solid fa-carrot"></i> Vegetables</div>
+    <div class="category-card"><i class="fa-solid fa-apple-whole"></i> Fruits</div>
+    <div class="category-card"><i class="fa-solid fa-seedling"></i> Herbs</div>
+    <div class="category-card"><i class="fa-solid fa-egg"></i> Dairy & Eggs</div>
+  </div>
+
+  <section id="shop" class="products-section">
+    <div class="section-header">
+      <h2>Fresh Arrivals Today</h2>
+      <p>Handpicked from our local partner farms just for you.</p>
+    </div>
+    
+    <div class="product-grid">
+      <!-- Product 1 -->
+      <div class="product-card">
+        <div class="product-badge">Organic</div>
+        <div class="product-img">🍅</div>
+        <div class="product-info">
+          <div class="product-category">Vegetables</div>
+          <h3 class="product-title">Heirloom Tomatoes</h3>
+          <div class="product-price">$4.99 <span>/ lb</span></div>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+      <!-- Product 2 -->
+      <div class="product-card">
+        <div class="product-badge" style="background: var(--primary);">Bestseller</div>
+        <div class="product-img">🥑</div>
+        <div class="product-info">
+          <div class="product-category">Fruits</div>
+          <h3 class="product-title">Hass Avocados</h3>
+          <div class="product-price">$2.50 <span>/ ea</span></div>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+      <!-- Product 3 -->
+      <div class="product-card">
+        <div class="product-img">🥦</div>
+        <div class="product-info">
+          <div class="product-category">Vegetables</div>
+          <h3 class="product-title">Farm Fresh Broccoli</h3>
+          <div class="product-price">$3.20 <span>/ bunch</span></div>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+      <!-- Product 4 -->
+      <div class="product-card">
+        <div class="product-badge">Local</div>
+        <div class="product-img">🍓</div>
+        <div class="product-info">
+          <div class="product-category">Fruits</div>
+          <h3 class="product-title">Sweet Strawberries</h3>
+          <div class="product-price">$5.99 <span>/ box</span></div>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="farm-features">
+    <div>
+      <div class="feature-icon"><i class="fa-solid fa-truck-fast"></i></div>
+      <h3>Same Day Delivery</h3>
+      <p>Order before 12 PM and receive your fresh produce the very same afternoon.</p>
+    </div>
+    <div>
+      <div class="feature-icon"><i class="fa-solid fa-seedling"></i></div>
+      <h3>100% Organic</h3>
+      <p>No pesticides, no synthetic fertilizers. Just pure, natural food.</p>
+    </div>
+    <div>
+      <div class="feature-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
+      <h3>Support Local</h3>
+      <p>Every purchase directly supports over 15 local independent farmers in the valley.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-col">
+        <h3><i class="fa-solid fa-leaf" style="color: var(--primary);"></i> FreshHarvest</h3>
+        <p>Providing the community with the freshest, healthiest local produce since 2018.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <a href="#">About Us</a>
+        <a href="#">Our Farmers</a>
+        <a href="#">Delivery Info</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h3>Store Info</h3>
+        <p><i class="fa-solid fa-location-dot"></i> 123 Farm Road, Valley Area</p>
+        <p><i class="fa-solid fa-phone"></i> (555) 123-4567</p>
+        <p><i class="fa-solid fa-envelope"></i> hello@freshharvest.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 FreshHarvest Market. All rights reserved. (Demo Template)
+    </div>
+  </footer>
+
+  <div class="return-bar">
+    <a href="../../index.html#templates" class="btn-return"><i class="fa-solid fa-arrow-left"></i> Back to Portfolio</a>
+  </div>
+</body>
+</html>

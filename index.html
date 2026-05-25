@@ -89,6 +89,9 @@
             <a href="#contact" class="btn btn-secondary">
               <span>Let's Collaborate</span>
             </a>
+            <a href="resume.html" target="_blank" class="btn btn-secondary" style="border-color: var(--accent-orange, #f39c12); color: var(--accent-orange, #f39c12); margin-left: 10px;">
+              <i class="fa-solid fa-file-pdf"></i> <span>Resume</span>
+            </a>
           </div>
           <div class="social-links">
             <a href="https://github.com/Amyseth" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
@@ -483,7 +486,10 @@
               <div class="template-price">
                 <span class="original-price">₹4,199</span> <span class="current-price">₹2,499</span> <span class="badge-pre">Pre-Order Offer</span>
               </div>
-              <button class="btn btn-secondary btn-full pre-order-btn" data-template="SaaS Launch Boilerplate">Pre-Order Template</button>
+              <div style="display: flex; gap: 10px; margin-top: 15px;">
+                <a href="templates/saas/index.html" target="_blank" class="btn btn-primary" style="flex: 1; text-align: center;">Live Preview</a>
+                <button class="btn btn-secondary pre-order-btn" style="flex: 1;" data-template="SaaS Launch Boilerplate">Get Template</button>
+              </div>
             </div>
           </div>
 
@@ -510,7 +516,38 @@
               <div class="template-price">
                 <span class="original-price">₹3,299</span> <span class="current-price">₹1,599</span> <span class="badge-pre">Pre-Order Offer</span>
               </div>
-              <button class="btn btn-secondary btn-full pre-order-btn" data-template="Interactive Admin Dashboard">Pre-Order Template</button>
+              <div style="display: flex; gap: 10px; margin-top: 15px;">
+                <a href="templates/admin/index.html" target="_blank" class="btn btn-primary" style="flex: 1; text-align: center;">Live Preview</a>
+                <button class="btn btn-secondary pre-order-btn" style="flex: 1;" data-template="Interactive Admin Dashboard">Get Template</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Template 3: Organic Grocery E-Commerce -->
+          <div class="template-card glass-panel">
+            <div class="template-badge" style="background: rgba(76, 175, 80, 0.2); color: #4caf50; border-color: rgba(76, 175, 80, 0.4);">New Arrival</div>
+            <div class="template-preview">
+              <div class="code-header">
+                <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                <span class="code-title">shop-cart.js</span>
+              </div>
+              <pre><code>function addToCart(item) {
+  const cart = getLocalCart();
+  cart.items.push(item);
+  updateBadge(cart.length);
+  showToast('Added ' + item.name);
+}</code></pre>
+            </div>
+            <div class="template-info">
+              <h3>FreshHarvest E-Commerce</h3>
+              <p>Complete e-commerce front-end for local businesses. Features product grids, category filtering, a shopping cart UI, and a fresh organic design.</p>
+              <div class="template-price">
+                <span class="original-price">₹2,499</span> <span class="current-price">₹1,299</span> <span class="badge-pre">Pre-Order Offer</span>
+              </div>
+              <div style="display: flex; gap: 10px; margin-top: 15px;">
+                <a href="templates/grocery/index.html" target="_blank" class="btn btn-primary" style="flex: 1; text-align: center;">Live Preview</a>
+                <button class="btn btn-secondary pre-order-btn" style="flex: 1;" data-template="FreshHarvest E-Commerce">Get Template</button>
+              </div>
             </div>
           </div>
         </div>
