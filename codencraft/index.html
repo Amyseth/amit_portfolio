@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CodeNCraft | Premium SaaS Boilerplates & Bespoke Software Development. We engineer high-performance web products, interactive admin dashboards, and custom software systems.">
+  <meta name="keywords" content="SaaS Boilerplate, CodeNCraft, Software Agency, Custom Web Development, Web Templates, Next.js, FastAPI, Node.js, Frontend Designer">
+  <meta name="author" content="CodeNCraft">
+  
+  <title>CodeNCraft | Premium SaaS Boilerplates & Custom Software Development</title>
+  
+  <!-- Preconnecting Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+  <!-- Glowing Background Canvas Canvas -->
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+  <div class="grid-overlay"></div>
+
+  <!-- Header Navigation -->
+  <header id="header">
+    <div class="nav-container">
+      <a href="#hero" class="logo">
+        <span class="logo-accent">&lt;</span>CodeNCraft<span class="logo-accent"> /&gt;</span>
+        <span class="logo-tag">STUDIO</span>
+      </a>
+      
+      <nav class="nav-menu" id="navMenu">
+        <ul>
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#templates" class="nav-link">Templates</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#estimator" class="nav-link">Estimator</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+          <li><a href="#contact" class="nav-link">Get a Quote</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="themeToggle" class="theme-btn" aria-label="Toggle Theme">
+          <i class="fa-solid fa-moon moon-icon"></i>
+          <i class="fa-solid fa-sun sun-icon"></i>
+        </button>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Brand Section -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge-dot"></span> Next-Gen SaaS Development
+          </div>
+          <h1 class="hero-title">
+            We Engineer <span class="text-gradient">Robust Code.</span>
+            We Craft <span class="text-gradient-purple">Exquisite Products.</span>
+          </h1>
+          <p class="hero-description">
+            Accelerate your startup launch with our production-ready developer boilerplates, or hire our design-engineering studio to build your high-end bespoke SaaS applications from scratch.
+          </p>
+          <div class="hero-actions">
+            <a href="#templates" class="btn btn-primary">
+              <span>Browse Boilerplates</span> <i class="fa-solid fa-store"></i>
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <span>Hire the Studio</span> <i class="fa-solid fa-chevron-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="code-frame glass-panel">
+            <div class="code-header">
+              <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+              <span class="code-title">codencraft-manifesto.js</span>
+            </div>
+            <div class="code-body">
+              <div class="code-line"><span class="token-comment">// CodeNCraft Core Principles</span></div>
+              <div class="code-line"><span class="token-keyword">const</span> studio = {</div>
+              <div class="code-line">&nbsp;&nbsp;codeQuality: <span class="token-string">"100% clean, modular, tested"</span>,</div>
+              <div class="code-line">&nbsp;&nbsp;designAesthetics: <span class="token-string">"Premium dark-cyber Glassmorphism"</span>,</div>
+              <div class="code-line">&nbsp;&nbsp;pagePerformance: <span class="token-keyword">new</span> <span class="token-function">Performance</span>({ loadTimeMs: <span class="token-number">200</span> }),</div>
+              <div class="code-line">&nbsp;&nbsp;coreMission: <span class="token-string">"Bridge the gap between engineering and art"</span></div>
+              <div class="code-line">};</div>
+              <div class="code-line"></div>
+              <div class="code-line"><span class="token-keyword">export default</span> <span class="token-function">launchProduct</span>(studio);</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Digital Product Marketplace (Templates) -->
+    <section id="templates" class="templates-section section-padding">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="subheading">Asset Library</span>
+          <h2 class="section-title text-center">Premium Developer Boilerplates</h2>
+          <div class="title-divider center"></div>
+          <p class="section-description center">Highly optimized, completely responsive, and feature-rich layouts engineered to launch your digital products in minutes.</p>
+        </div>
+
+        <div class="templates-grid">
+          <!-- Template 1: SaaS Launch Boilerplate -->
+          <div class="template-card glass-panel">
+            <div class="template-badge">BEST SELLER</div>
+            <div class="template-preview">
+              <pre><code>:root {
+  --primary-neon: #9d4edd;
+  --secondary-neon: #00f0ff;
+  --backdrop-blur: 20px;
+}
+.dashboard-grid {
+  display: grid;
+  backdrop-filter: var(--backdrop-blur);
+}</code></pre>
+            </div>
+            <div class="template-info">
+              <h3>SaaS Launch Boilerplate</h3>
+              <p>Fully responsive landing layouts optimized for conversion. Features landing grids, multiple feature columns, a pricing framework, and an active newsletter submission state.</p>
+              <div class="template-price">
+                <span class="original-price">₹4,199</span>
+                <span class="current-price">₹2,499</span>
+                <span class="badge-pre">40% OFF</span>
+              </div>
+              <div style="display: flex; gap: 10px; margin-top: 15px;">
+                <a href="../templates/saas/index.html" target="_blank" class="btn btn-secondary" style="flex: 1; text-align: center;">Live Preview</a>
+                <button class="btn btn-primary buy-template-btn" style="flex: 1;" data-template="SaaS Launch Boilerplate" data-price="₹2,499">Buy Code</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Template 2: Custom Dashboard Kit -->
+          <div class="template-card glass-panel">
+            <div class="template-badge">POPULAR</div>
+            <div class="template-preview">
+              <pre><code>function initSaaSDashboard() {
+  const sidebar = document.querySelector('.sidebar');
+  const metrics = fetchRealtimeAnalytics();
+  return new Chart('metricsGrid', {
+    data: metrics,
+    responsive: true
+  });
+}</code></pre>
+            </div>
+            <div class="template-info">
+              <h3>Interactive Admin Dashboard</h3>
+              <p>Visual UI layout package featuring modular widgets, sidebar layouts, occupancy metrics, reservation rooms, secure client grids, and payment charts.</p>
+              <div class="template-price">
+                <span class="original-price">₹3,299</span>
+                <span class="current-price">₹1,599</span>
+                <span class="badge-pre">50% OFF</span>
+              </div>
+              <div style="display: flex; gap: 10px; margin-top: 15px;">
+                <a href="../templates/admin/index.html" target="_blank" class="btn btn-secondary" style="flex: 1; text-align: center;">Live Preview</a>
+                <button class="btn btn-primary buy-template-btn" style="flex: 1;" data-template="Interactive Admin Dashboard" data-price="₹1,599">Buy Code</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Template 3: FreshHarvest Grocery E-Commerce -->
+          <div class="template-card glass-panel">
+            <div class="template-badge">NEW ARRIVAL</div>
+            <div class="template-preview">
+              <pre><code>function updateShoppingCart() {
+  const cart = getLocalSession();
+  const total = cart.items.reduce((sum, item) => {
+    return sum + item.price;
+  }, 0);
+  renderCartBadge(cart.length);
+}</code></pre>
+            </div>
+            <div class="template-info">
+              <h3>FreshHarvest E-Commerce</h3>
+              <p>Complete clean organic e-commerce storefront. Pre-configured dynamic organic product layouts, category filters, responsive checkout drawers, and shopping carts.</p>
+              <div class="template-price">
+                <span class="original-price">₹2,499</span>
+                <span class="current-price">₹1,299</span>
+                <span class="badge-pre">48% OFF</span>
+              </div>
+              <div style="display: flex; gap: 10px; margin-top: 15px;">
+                <a href="../templates/grocery/index.html" target="_blank" class="btn btn-secondary" style="flex: 1; text-align: center;">Live Preview</a>
+                <button class="btn btn-primary buy-template-btn" style="flex: 1;" data-template="FreshHarvest E-Commerce" data-price="₹1,299">Buy Code</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bespoke Services & Pricing Grid (Freelance Packages) -->
+    <section id="services" class="services-section section-padding">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="subheading">Bespoke Design & Development</span>
+          <h2 class="section-title text-center">Custom Software Development Packages</h2>
+          <div class="title-divider center"></div>
+          <p class="section-description center">Need a custom application engineered specifically to resolve your unique business bottlenecks? We deliver highly reliable solutions.</p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Tier 1: UI / UX Rebrand -->
+          <div class="service-card glass-panel">
+            <div class="service-icon"><i class="fa-solid fa-bezier-curve"></i></div>
+            <div class="service-title">
+              <h3>Custom Frontend & Rebranding</h3>
+              <p style="font-size: 0.85rem; color: var(--text-muted);">Transform your product appearance.</p>
+            </div>
+            <div class="service-price">
+              <span class="price-lbl">Investment Range</span>
+              <span class="price-val">₹19,999+</span>
+              <span class="price-sub">Delivered in 1 Week</span>
+            </div>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-circle-check"></i> High-End Vanilla CSS & Layouts</li>
+              <li><i class="fa-solid fa-circle-check"></i> 100% Responsive Grid & Flexbox</li>
+              <li><i class="fa-solid fa-circle-check"></i> Seamless Micro-Animations & Glows</li>
+              <li><i class="fa-solid fa-circle-check"></i> Core Web Vitals Optimization</li>
+              <li><i class="fa-solid fa-circle-check"></i> 2 Months Technical Support</li>
+            </ul>
+            <a href="#contact" class="btn btn-secondary service-btn" data-service="Frontend Rebrand">Select Package</a>
+          </div>
+
+          <!-- Tier 2: SaaS MVP Builder (RECOMMENDED) -->
+          <div class="service-card glass-panel recommended">
+            <div class="template-badge">RECOMMENDED</div>
+            <div class="service-icon"><i class="fa-solid fa-rocket"></i></div>
+            <div class="service-title">
+              <h3>Full-Stack SaaS MVP Builder</h3>
+              <p style="font-size: 0.85rem; color: var(--text-muted);">Launch your business SaaS in record speed.</p>
+            </div>
+            <div class="service-price">
+              <span class="price-lbl">Investment Range</span>
+              <span class="price-val">₹49,999+</span>
+              <span class="price-sub">Delivered in 2-3 Weeks</span>
+            </div>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-circle-check"></i> Secure User Auth & Databases</li>
+              <li><i class="fa-solid fa-circle-check"></i> Custom Admin & Client Portals</li>
+              <li><i class="fa-solid fa-circle-check"></i> Stripe Subscription Checkout</li>
+              <li><i class="fa-solid fa-circle-check"></i> Offline-First Local Cache Systems</li>
+              <li><i class="fa-solid fa-circle-check"></i> 6 Months Technical Support</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary service-btn" data-service="SaaS MVP Builder">Select Package</a>
+          </div>
+
+          <!-- Tier 3: AI Engine Integration -->
+          <div class="service-card glass-panel">
+            <div class="service-icon"><i class="fa-solid fa-brain"></i></div>
+            <div class="service-title">
+              <h3>AI & Algorithmic Integration</h3>
+              <p style="font-size: 0.85rem; color: var(--text-muted);">Infuse smart logic into your operations.</p>
+            </div>
+            <div class="service-price">
+              <span class="price-lbl">Investment Range</span>
+              <span class="price-val">Custom Quote</span>
+              <span class="price-sub">Based on Scope</span>
+            </div>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-circle-check"></i> Gemini & ChatGPT API Pipelines</li>
+              <li><i class="fa-solid fa-circle-check"></i> Reinforcement Learning CTR loops</li>
+              <li><i class="fa-solid fa-circle-check"></i> Complex Computational Estimators</li>
+              <li><i class="fa-solid fa-circle-check"></i> Proprietary Algorithmic Builders</li>
+              <li><i class="fa-solid fa-circle-check"></i> 1 Year Architectural Support</li>
+            </ul>
+            <a href="#contact" class="btn btn-secondary service-btn" data-service="AI Engine Integration">Request Quote</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Budget / Cost Estimator Widget -->
+    <section id="estimator" class="estimator-section section-padding">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="subheading">Interactive Costing</span>
+          <h2 class="section-title text-center">Bespoke Scope & Price Estimator</h2>
+          <div class="title-divider center"></div>
+          <p class="section-description center">Estimate your custom software development cost instantly. Drag the slider to outline your requirements and see a calculated range.</p>
+        </div>
+
+        <div class="estimator-panel glass-panel">
+          <div class="estimator-grid">
+            <div class="slider-container">
+              <div class="range-group">
+                <div class="slider-labels">
+                  <span>Pages / Modules Required</span>
+                  <span class="slider-val" id="pagesValue">3 Pages</span>
+                </div>
+                <input type="range" id="pagesSlider" class="slider-element" min="1" max="15" value="3">
+              </div>
+
+              <div class="range-group">
+                <div class="slider-labels">
+                  <span>Technical System Complexity</span>
+                  <span class="slider-val" id="complexityValue">Basic Frontend</span>
+                </div>
+                <input type="range" id="complexitySlider" class="slider-element" min="1" max="4" value="1">
+              </div>
+
+              <div class="checklist-group">
+                <span style="font-family: var(--font-display); font-weight: 600; font-size: 0.95rem;">Additional Add-Ons</span>
+                <label class="checkbox-label">
+                  <input type="checkbox" id="stripeCheck" class="checkbox-element">
+                  <span>Stripe Subscription / Booking Billing (+ ₹9,999)</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" id="aiCheck" class="checkbox-element">
+                  <span>Gemini AI / Algorithmic Engine (+ ₹14,999)</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="estimate-results">
+              <span class="result-title">CodeNCraft Estimated Quote</span>
+              <div class="result-price-range" id="estimateRange">₹19,999 - ₹24,999</div>
+              <p class="result-timeline">Approximate Delivery: <strong id="estimateTimeline">1-2 Weeks</strong></p>
+              <a href="#contact" class="btn btn-primary" id="budgetBookBtn" style="margin-top: 10px;">Book With This Scope</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Objections Handling Accordion -->
+    <section id="faq" class="faq-section section-padding">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="subheading">Common Inquiries</span>
+          <h2 class="section-title text-center">Frequently Asked Questions</h2>
+          <div class="title-divider center"></div>
+          <p class="section-description center">Answering critical queries regarding licenses, customizations, and project workflows.</p>
+        </div>
+
+        <div class="faq-section">
+          <div class="faq-item">
+            <button class="faq-trigger">
+              <span>What is included when I purchase a Boilerplate?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-panel">
+              <div class="faq-panel-content">
+                You receive full instant access to a cleanly structured codebase including completely responsive HTML5 files, custom vanilla CSS variables, interactive app.js controllers, and local storage state engines. Everything is self-contained with no heavy framework dependencies.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger">
+              <span>Do you offer custom setup and configurations?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-panel">
+              <div class="faq-panel-content">
+                Yes! If you buy any boilerplate and want us to customize it for your brand (e.g. connecting active database endpoints, integrating custom dashboards, or setting up hosting), you can select our "Premium UI Rebrand" custom package.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger">
+              <span>What is your contract payment structure?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-panel">
+              <div class="faq-panel-content">
+                For bespoke freelance software development, we typically operate on a milestone structure: 50% upfront initial deposit to start development, and 50% final payment upon successful demo verification and final deployment transfer.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger">
+              <span>How secure are the applications built by CodeNCraft?</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="faq-panel">
+              <div class="faq-panel-content">
+                Extremely secure. We use modern industry standards including secure password hashing, localized offline databases, encrypted storage vaults bypassing unsafe third-party tracking scripts, and strict authentication middleware patterns.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quote Request & Lead Capturing Form -->
+    <section id="contact" class="contact-section section-padding">
+      <div class="container contact-grid">
+        <div class="contact-info">
+          <span class="subheading">Collaborate With Us</span>
+          <h2 class="section-title">Let's Construct Your Digital Masterpiece</h2>
+          <div class="title-divider left"></div>
+          <p class="contact-desc">
+            Submit your project details to request a custom quote, select a service tier, or schedule a free 15-minute discovery consultation. We review all submissions within 12 hours.
+          </p>
+
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="item-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div>
+                <h4>Direct Studio Email</h4>
+                <p><a href="mailto:aseth230@gmail.com">studio@codencraft.in</a></p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="item-icon"><i class="fa-solid fa-clock"></i></div>
+              <div>
+                <h4>Operational Work Hours</h4>
+                <p>Monday - Friday, 9:00 AM - 6:00 PM (GMT+5:30)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-panel glass-panel">
+          <form id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="clientName">Full Name <span class="required">*</span></label>
+                <div class="input-wrapper">
+                  <i class="fa-regular fa-user input-icon"></i>
+                  <input type="text" id="clientName" name="clientName" placeholder="John Doe" required>
+                </div>
+                <span class="error-msg" id="nameError">Name is required.</span>
+              </div>
+              <div class="form-group">
+                <label for="clientEmail">Email Address <span class="required">*</span></label>
+                <div class="input-wrapper">
+                  <i class="fa-regular fa-envelope input-icon"></i>
+                  <input type="email" id="clientEmail" name="clientEmail" placeholder="john@example.com" required>
+                </div>
+                <span class="error-msg" id="emailError">Please enter a valid email.</span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="businessName">Company / Business Name</label>
+                <div class="input-wrapper">
+                  <i class="fa-solid fa-building input-icon"></i>
+                  <input type="text" id="businessName" name="businessName" placeholder="e.g. Apex SaaS Ltd">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="projectType">Service Tier / Scope</label>
+                <div class="input-wrapper">
+                  <i class="fa-solid fa-laptop-code input-icon"></i>
+                  <select id="projectType" name="projectType">
+                    <option value="saas">Custom SaaS MVP Package</option>
+                    <option value="rebrand">Frontend Rebrand Package</option>
+                    <option value="ai">AI Engine / Algorithmic Integration</option>
+                    <option value="estimator">Estimator Scope (Self-Configured)</option>
+                    <option value="other">Other Digital Inquiry</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="budgetRange">Estimated Project Budget</label>
+              <div class="input-wrapper">
+                <i class="fa-solid fa-wallet input-icon"></i>
+                <select id="budgetRange" name="budgetRange">
+                  <option value="under50">Under ₹20,000</option>
+                  <option value="medium">₹20,000 - ₹50,000</option>
+                  <option value="large">₹50,000 - ₹1,00,000</option>
+                  <option value="custom">₹1,00,000+ (Enterprise Scope)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="clientMessage">Project Vision & Goals <span class="required">*</span></label>
+              <div class="input-wrapper textarea-wrapper">
+                <i class="fa-regular fa-comment input-icon"></i>
+                <textarea id="clientMessage" name="clientMessage" rows="4" placeholder="Detail your project features, expected timelines, and dashboard scope..." required></textarea>
+              </div>
+              <span class="error-msg" id="messageError">Message details are required.</span>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+              <span>Transmit Studio Inquiry</span> <i class="fa-regular fa-paper-plane"></i>
+            </button>
+          </form>
+
+          <!-- Success Box Display -->
+          <div class="form-success-box" id="successBox">
+            <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+            <h3>Inquiry Transmitted Successfully!</h3>
+            <p>Your business inquiry has been recorded. Our lead engineer will contact you within 12 hours with a comprehensive roadmap pitch.</p>
+            <div class="success-actions">
+              <button class="btn btn-secondary btn-sm" id="exportLeadsBtn">
+                <i class="fa-solid fa-download"></i> Download Details
+              </button>
+              <button class="btn btn-primary btn-sm" id="resetFormBtn">
+                Send Another Inquiry
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Checkout/Access Dialog Modal Component -->
+  <div class="modal-backdrop" id="checkoutModalBackdrop">
+    <div class="modal-card glass-panel">
+      <button class="modal-close" id="modalCloseBtn" aria-label="Close Checkout">&times;</button>
+      <div class="modal-header-hero" style="background-image: linear-gradient(rgba(7, 9, 19, 0.7), rgba(7, 9, 19, 0.98)), url('../assets/hotel.png');">
+        <span class="project-type">Secure Storefront Checkout</span>
+        <h2 id="checkoutTemplateTitle">SaaS Launch Boilerplate</h2>
+      </div>
+      <div class="modal-body">
+        <form id="checkoutForm" novalidate style="display: flex; flex-direction: column; gap: 15px;">
+          <div class="form-group">
+            <span style="font-size: 0.95rem; color: var(--text-muted); display: block; text-align: center; margin-bottom: 5px;">
+              Total Price: <strong id="checkoutTemplatePrice" style="color: var(--secondary-neon); font-size: 1.3rem;">₹2,499</strong>
+            </span>
+          </div>
+          <div class="form-group">
+            <label for="checkoutName">Customer Name <span class="required">*</span></label>
+            <div class="input-wrapper">
+              <i class="fa-regular fa-user input-icon"></i>
+              <input type="text" id="checkoutName" placeholder="Your Name" required>
+            </div>
+            <span class="error-msg" id="checkoutNameError">Name is required.</span>
+          </div>
+          <div class="form-group">
+            <label for="checkoutEmail">Delivery Email Address <span class="required">*</span></label>
+            <div class="input-wrapper">
+              <i class="fa-regular fa-envelope input-icon"></i>
+              <input type="email" id="checkoutEmail" placeholder="your@email.com" required>
+            </div>
+            <span class="error-msg" id="checkoutEmailError">A valid email is required for delivery.</span>
+          </div>
+          
+          <button type="submit" class="btn btn-primary btn-full" style="margin-top: 10px;">
+            <span>Secure Instant Purchase</span> <i class="fa-solid fa-lock"></i>
+          </button>
+        </form>
+
+        <!-- Checkout Success Display -->
+        <div class="form-success-box" id="checkoutSuccessBox">
+          <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+          <h3>Pre-Order & Purchase Captured!</h3>
+          <p>Thank you! Your interest has been securely catalogued. Since the digital store is launching next week, we will prioritize your email <strong id="purchasedCustomerEmail" style="color: var(--secondary-neon);"></strong> for a complimentary <strong>90% discount</strong> code upon launch!</p>
+          <button class="btn btn-secondary btn-sm" id="closeCheckoutSuccessBtn" style="margin-top: 10px;">Return to Shop</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-content">
+      <p class="copyright">&copy; 2026 CodeNCraft Studio. All Rights Reserved. Engineered with Pure CSS & Excellence.</p>
+      <div class="footer-links">
+        <a href="#hero">Home</a>
+        <a href="#templates">Templates</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
