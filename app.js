@@ -495,25 +495,9 @@ function initContactForm() {
     // Virtual anchor creation to trigger automatic downloads
     const downloadAnchor = document.createElement('a');
     downloadAnchor.setAttribute("href", dataStr);
-    downloadAnchor.setAttribute("download", `portfolio_client_inquiries_${new Date().toISOString().split('T')[0]}.json`);
+    downloadAnchor.setAttribute("download", `portfolio_career_inquiries_${new Date().toISOString().split('T')[0]}.json`);
     document.body.appendChild(downloadAnchor);
     downloadAnchor.click();
     downloadAnchor.remove();
-  });
-
-  // Add event listener for Pre-Order template button clicks
-  const preOrderBtns = document.querySelectorAll('.pre-order-btn');
-  preOrderBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const templateName = btn.getAttribute('data-template');
-      alert(`Thank you for your interest in "${templateName}"! The template store is coming soon. We will save your interest locally!`);
-      
-      const interestLogs = JSON.parse(localStorage.getItem('template_interests') || '[]');
-      interestLogs.push({
-        template: templateName,
-        timestamp: new Date().toISOString()
-      });
-      localStorage.setItem('template_interests', JSON.stringify(interestLogs));
-    });
   });
 }
