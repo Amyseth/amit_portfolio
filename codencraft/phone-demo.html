@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ApexMobiles - Premium Pre-Owned & Certified Smartphones & Accessories</title>
+  <meta name="description" content="Get like-new, fully certified smartphones and authentic accessories at unbeatable prices. Full warranty, 100% checked. Shop now!">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Outfit', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              dark: '#090D1A',
+              card: '#13192B',
+              accent: '#3B82F6',
+              neonCyan: '#06B6D4',
+              neonIndigo: '#6366F1',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #090D1A;
+      color: #E2E8F0;
+    }
+    .neon-border-gradient {
+      position: relative;
+      border-radius: 1rem;
+      background: linear-gradient(90deg, #06B6D4, #6366F1);
+      padding: 1px;
+    }
+    .neon-border-inner {
+      background: #13192B;
+      border-radius: 0.95rem;
+    }
+    .glassmorphism {
+      background: rgba(19, 25, 43, 0.6);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .pulse-green {
+      animation: pulseGreen 1.5s infinite;
+    }
+    @keyframes pulseGreen {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); }
+      50% { box-shadow: 0 0 12px 4px rgba(16, 185, 129, 0.2); }
+    }
+    .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+    .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="font-sans antialiased overflow-x-hidden">
+
+  <!-- Header Section -->
+  <header class="fixed top-0 left-0 w-full z-50 glassmorphism border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 sm:h-20">
+        <!-- Logo -->
+        <div class="flex items-center gap-2">
+          <div class="p-2 bg-gradient-to-tr from-brand-neonCyan to-brand-neonIndigo rounded-lg shadow-lg">
+            <i data-lucide="smartphone" class="w-6 h-6 text-white animate-pulse"></i>
+          </div>
+          <span class="text-xl font-bold bg-gradient-to-r from-brand-neonCyan to-brand-neonIndigo bg-clip-text text-transparent">ApexMobiles</span>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="#hero" class="text-sm font-medium text-slate-300 hover:text-white transition">Home</a>
+          <a href="#admin-demo" class="text-sm font-medium text-amber-400 hover:text-amber-300 transition flex items-center gap-1.5"><i data-lucide="sparkles" class="w-3.5 h-3.5"></i>Live Demo</a>
+          <a href="#store-stock" class="text-sm font-medium text-slate-300 hover:text-white transition">Live Stock</a>
+          <a href="#exchange-calculator" class="text-sm font-medium text-slate-300 hover:text-white transition">Trade-In</a>
+          <a href="#why-choose-us" class="text-sm font-medium text-slate-300 hover:text-white transition">Our Trust</a>
+        </nav>
+
+        <!-- CTA Buttons -->
+        <div class="flex items-center gap-4">
+          <a href="tel:+919876543210" class="hidden sm:flex items-center gap-2 text-xs font-semibold text-slate-300 hover:text-white border border-slate-700 rounded-full px-4 py-2 hover:border-slate-500 transition">
+            <i data-lucide="phone" class="w-3.5 h-3.5 text-brand-neonCyan"></i>
+            <span>Call Store</span>
+          </a>
+          <a href="https://wa.me/919876543210?text=Hi%2C%20I%20visited%20your%20website%20and%20want%20to%20know%20about%20your%20inventory." target="_blank" class="flex items-center gap-2 text-xs font-semibold bg-emerald-600 hover:bg-emerald-500 text-white rounded-full px-4 py-2 shadow-lg shadow-emerald-950/30 transition">
+            <i data-lucide="message-square" class="w-3.5 h-3.5"></i>
+            <span>WhatsApp Stock</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="relative pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-950/20 via-brand-dark to-brand-dark">
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-brand-neonCyan/10 blur-[120px] rounded-full pointer-events-none"></div>
+    <div class="absolute top-1/3 left-1/3 w-80 h-80 bg-brand-neonIndigo/10 blur-[100px] rounded-full pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <!-- Text details -->
+        <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-xs text-brand-neonCyan font-semibold tracking-wide shadow-inner">
+            <span class="flex h-2 w-2 relative">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
+            </span>
+            Stock Updated Live Just 10 Mins Ago
+          </div>
+          
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] text-white">
+            Premium Phones & Accessories. <br>
+            <span class="bg-gradient-to-r from-brand-neonCyan to-brand-neonIndigo bg-clip-text text-transparent">Affordable Prices.</span>
+          </h1>
+          
+          <p class="text-lg text-slate-400 max-w-2xl mx-auto lg:mx-0">
+            Why pay full price when you can get certified like-new premium smartphones and genuine accessories at up to 50% off? Try our **Auto-Specs Stock Demo** below to see how incredibly simple it is for a shop owner to manage this catalog!
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+            <a href="#admin-demo" class="w-full sm:w-auto text-center font-semibold bg-amber-500 hover:bg-amber-400 text-slate-955 rounded-xl px-8 py-4 shadow-lg shadow-amber-950/20 transition duration-300 flex items-center justify-center gap-2">
+              <i data-lucide="sparkles" class="w-5 h-5"></i>
+              Try Interactive Admin Demo
+            </a>
+            <a href="#store-stock" class="w-full sm:w-auto text-center font-semibold bg-slate-900 hover:bg-slate-850 text-slate-200 border border-slate-800 rounded-xl px-8 py-4 transition duration-300">
+              Browse Live Stock
+            </a>
+          </div>
+        </div>
+
+        <!-- Mockup Display Card -->
+        <div class="lg:col-span-5 relative flex justify-center">
+          <div class="relative w-72 sm:w-80 h-[500px] neon-border-gradient shadow-2xl shadow-indigo-500/10">
+            <div class="w-full h-full neon-border-inner p-4 overflow-hidden flex flex-col justify-between">
+              <div class="flex justify-between items-center text-xs text-slate-400 border-b border-slate-800 pb-2.5">
+                <span>ApexMobiles Store</span>
+                <span class="text-brand-neonCyan font-semibold">100% Genuine</span>
+              </div>
+              
+              <div class="my-auto space-y-6 py-6 text-center">
+                <div class="relative w-36 h-36 mx-auto bg-slate-900/60 rounded-full flex items-center justify-center border border-slate-800 shadow-inner">
+                  <i data-lucide="shield-check" class="w-16 h-16 text-brand-neonCyan opacity-90"></i>
+                </div>
+                <div class="space-y-2">
+                  <h3 class="text-lg font-bold text-white">Apex Certified Pre-Owned</h3>
+                  <p class="text-xs text-slate-400 px-4">Our smartphones pass extensive physical diagnostics, battery health vetting, and parts verification checks before landing in your hands.</p>
+                </div>
+              </div>
+
+              <div class="bg-slate-900/90 border border-slate-800 rounded-xl p-3 text-left space-y-2.5">
+                <div class="flex items-center justify-between text-xs">
+                  <span class="text-slate-400">Battery Status</span>
+                  <span class="text-emerald-400 font-semibold">85%+ Health Guarantee</span>
+                </div>
+                <div class="w-full bg-slate-850 rounded-full h-1.5 overflow-hidden">
+                  <div class="bg-emerald-500 h-1.5 rounded-full" style="width: 88%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE ADMIN MOCK DEMO -->
+  <section id="admin-demo" class="py-16 bg-slate-900/40 border-y border-slate-900 relative">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Headline -->
+      <div class="text-center space-y-4 mb-10">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-xs text-amber-400 font-semibold">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Live Interactive Demo
+        </div>
+        <h2 class="text-3xl font-extrabold text-white">See the "Auto-Specs Library" In Action</h2>
+        <p class="text-sm text-slate-400 max-w-2xl mx-auto">
+          Experience exactly how a shop owner adds inventory in **10 seconds**! Select a brand and model below to watch the tech specs fill out instantly, or add a Custom Item to see how they manage unlisted accessories like smartwatches or cables!
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+        
+        <!-- Left Column: The Admin Form -->
+        <div class="lg:col-span-6 bg-slate-900/80 p-6 sm:p-8 rounded-2xl border border-slate-800 flex flex-col justify-between space-y-6">
+          <div>
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-4 gap-4">
+               <h3 class="text-lg font-bold text-white flex items-center gap-2">
+                <i data-lucide="plus-circle" class="text-amber-400 w-5 h-5"></i>
+                Simulated Owner Form
+              </h3>
+              <!-- Category Toggle -->
+              <div class="flex bg-slate-950 rounded-lg p-1 border border-slate-800">
+                <button onclick="setFormCategory('Phone')" id="form-cat-phone" class="px-3 py-1.5 text-xs font-semibold rounded-md bg-slate-800 text-white transition flex items-center gap-1.5 shadow-sm">
+                   <i data-lucide="smartphone" class="w-3.5 h-3.5"></i> Phone
+                </button>
+                <button onclick="setFormCategory('Accessory')" id="form-cat-acc" class="px-3 py-1.5 text-xs font-semibold rounded-md text-slate-400 hover:text-white transition flex items-center gap-1.5">
+                   <i data-lucide="headphones" class="w-3.5 h-3.5"></i> Accessory
+                </button>
+              </div>
+            </div>
+            
+            <p class="text-xs text-slate-500 mb-6">The shopkeeper only selects these basic details.</p>
+
+            <div class="space-y-4">
+              <div class="grid grid-cols-2 gap-4">
+                <!-- Select Brand -->
+                <div>
+                  <label class="block text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-2">1. Select Brand</label>
+                  <select id="form-brand" onchange="updateFormModels()" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-xs focus:outline-none focus:border-brand-neonCyan text-white">
+                    <option value="">Select Brand</option>
+                    <option value="Apple">Apple</option>
+                    <option value="Samsung">Samsung</option>
+                    <option value="OnePlus">OnePlus</option>
+                    <option value="JBL" class="acc-brand hidden">JBL</option>
+                    <option value="Sony" class="acc-brand hidden">Sony</option>
+                    <option value="Other">Other / Custom</option>
+                  </select>
+                </div>
+
+                <!-- Select Model or Custom Model Input -->
+                <div>
+                  <label class="block text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-2" id="model-label">2. Select Model</label>
+                  
+                  <select id="form-model" onchange="handleModelChange()" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-xs focus:outline-none focus:border-brand-neonCyan text-white" disabled>
+                    <option value="">Choose Brand First</option>
+                  </select>
+                  
+                  <input type="text" id="form-custom-model" placeholder="e.g. Boat Smartwatch" class="hidden w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-xs focus:outline-none focus:border-brand-neonCyan text-white">
+                </div>
+              </div>
+
+              <!-- Phone specific fields -->
+              <div id="form-phone-fields" class="grid grid-cols-3 gap-3">
+                <!-- ROM/RAM -->
+                <div>
+                  <label class="block text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-2">3. Storage</label>
+                  <select id="form-rom" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-2.5 text-xs focus:outline-none focus:border-brand-neonCyan text-white">
+                    <option value="128GB">128GB</option>
+                    <option value="256GB">256GB</option>
+                    <option value="512GB">512GB</option>
+                    <option value="1TB">1TB</option>
+                  </select>
+                </div>
+                <!-- Color -->
+                <div>
+                  <label class="block text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-2">4. Color</label>
+                  <input type="text" id="form-color" placeholder="e.g. Black" value="Midnight" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-2.5 text-xs focus:outline-none focus:border-brand-neonCyan text-white">
+                </div>
+                <!-- Condition -->
+                <div>
+                  <label class="block text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-2">5. Condition</label>
+                  <select id="form-condition" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-2.5 text-xs focus:outline-none focus:border-brand-neonCyan text-white">
+                    <option value="Like New (99%)">Like New (99%)</option>
+                    <option value="Excellent">Excellent</option>
+                    <option value="Good">Good Condition</option>
+                  </select>
+                </div>
+              </div>
+              
+              <!-- Accessory specific fields -->
+              <div id="form-acc-fields" class="grid grid-cols-2 gap-3 hidden">
+                <!-- Color / Type -->
+                <div>
+                  <label class="block text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-2">3. Color / Variant</label>
+                  <input type="text" id="form-acc-variant" placeholder="e.g. White" value="White" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-2.5 text-xs focus:outline-none focus:border-brand-neonCyan text-white">
+                </div>
+                 <!-- Condition -->
+                <div>
+                  <label class="block text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-2">4. Condition</label>
+                  <select id="form-acc-condition" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-2.5 text-xs focus:outline-none focus:border-brand-neonCyan text-white">
+                    <option value="Brand New Sealed">Brand New Sealed</option>
+                    <option value="Open Box (Unused)">Open Box (Unused)</option>
+                    <option value="Used - Excellent">Used - Excellent</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-2 gap-4" id="form-bottom-fields">
+                <!-- Unique Price -->
+                <div>
+                  <label class="block text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-2" id="label-price">6. Selling Price (₹)</label>
+                  <input type="number" id="form-price" value="42000" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-xs focus:outline-none focus:border-brand-neonCyan text-white">
+                </div>
+                <!-- Battery Health (Phones only) -->
+                <div id="form-battery-container">
+                  <label class="block text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-2">7. Battery Status</label>
+                  <input type="text" id="form-battery" value="91% Health" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-xs focus:outline-none focus:border-brand-neonCyan text-white">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Simulation Button -->
+          <button onclick="simulateAddStock()" class="w-full py-4 mt-6 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 font-bold text-slate-950 rounded-xl shadow-lg transition duration-200 flex items-center justify-center gap-2">
+            <i data-lucide="plus" class="w-4 h-4"></i>
+            <span>➕ Add to Live Catalog Instantly</span>
+          </button>
+        </div>
+
+        <!-- Right Column: Auto Spec Engine (Visually demonstrating auto populate) -->
+        <div class="lg:col-span-6 bg-slate-950 border border-slate-800 p-6 sm:p-8 rounded-2xl flex flex-col justify-between">
+          <div>
+            <div class="flex justify-between items-center mb-6">
+              <h3 class="text-sm font-bold tracking-widest text-slate-400 uppercase flex items-center gap-2">
+                <span class="flex h-2 w-2 relative">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                </span>
+                Live Auto-Specs Engine
+              </h3>
+              <span class="text-[10px] bg-slate-900 border border-slate-800 px-2.5 py-1 text-slate-400 rounded-md font-mono" id="lookup-badge">DATABASE LOOKUP</span>
+            </div>
+
+            <!-- Specs details -->
+            <div class="space-y-4">
+              <!-- Field 1 -->
+              <div class="p-3 bg-slate-900/40 border border-slate-900 rounded-xl flex items-center justify-between transition-all duration-300" id="spec-1-box">
+                <div class="flex items-center gap-3">
+                  <i data-lucide="cpu" class="w-5 h-5 text-brand-neonCyan" id="spec-1-icon"></i>
+                  <div>
+                    <div class="text-[10px] text-slate-500 uppercase font-semibold" id="spec-1-label">Processor (CPU)</div>
+                    <div class="text-sm font-bold text-white" id="spec-1-val">--</div>
+                  </div>
+                </div>
+                <span class="text-[10px] text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded font-medium border border-emerald-500/10 opacity-0 spec-badge" id="spec-1-status">Auto-Filled</span>
+              </div>
+
+              <!-- Field 2 -->
+              <div class="p-3 bg-slate-900/40 border border-slate-900 rounded-xl flex items-center justify-between transition-all duration-300" id="spec-2-box">
+                <div class="flex items-center gap-3">
+                  <i data-lucide="camera" class="w-5 h-5 text-brand-neonCyan" id="spec-2-icon"></i>
+                  <div>
+                    <div class="text-[10px] text-slate-500 uppercase font-semibold" id="spec-2-label">Camera Megapixels</div>
+                    <div class="text-sm font-bold text-white" id="spec-2-val">--</div>
+                  </div>
+                </div>
+                <span class="text-[10px] text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded font-medium border border-emerald-500/10 opacity-0 spec-badge" id="spec-2-status">Auto-Filled</span>
+              </div>
+
+              <!-- Field 3 -->
+              <div class="p-3 bg-slate-900/40 border border-slate-900 rounded-xl flex items-center justify-between transition-all duration-300" id="spec-3-box">
+                <div class="flex items-center gap-3">
+                  <i data-lucide="battery" class="w-5 h-5 text-brand-neonCyan" id="spec-3-icon"></i>
+                  <div>
+                    <div class="text-[10px] text-slate-500 uppercase font-semibold" id="spec-3-label">Standard Battery Size</div>
+                    <div class="text-sm font-bold text-white" id="spec-3-val">--</div>
+                  </div>
+                </div>
+                <span class="text-[10px] text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded font-medium border border-emerald-500/10 opacity-0 spec-badge" id="spec-3-status">Auto-Filled</span>
+              </div>
+
+              <!-- Field 4 -->
+              <div class="p-3 bg-slate-900/40 border border-slate-900 rounded-xl flex items-center justify-between transition-all duration-300" id="spec-4-box">
+                <div class="flex items-center gap-3">
+                  <i data-lucide="maximize" class="w-5 h-5 text-brand-neonCyan" id="spec-4-icon"></i>
+                  <div>
+                    <div class="text-[10px] text-slate-500 uppercase font-semibold" id="spec-4-label">Screen Display Size</div>
+                    <div class="text-sm font-bold text-white" id="spec-4-val">--</div>
+                  </div>
+                </div>
+                <span class="text-[10px] text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded font-medium border border-emerald-500/10 opacity-0 spec-badge" id="spec-4-status">Auto-Filled</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Notice -->
+          <div class="mt-6 p-4 rounded-xl bg-slate-900/50 border border-slate-850 flex gap-3 text-xs text-slate-400">
+            <i data-lucide="info" class="w-5 h-5 text-brand-neonCyan shrink-0 mt-0.5 animate-bounce"></i>
+            <p><strong>Look closely:</strong> The shop owner didn't have to search Google or write a single word of these tech details! It populated in real-time as they chose the model.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Stock Section -->
+  <section id="store-stock" class="py-20 bg-slate-950/40 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <!-- Section Title -->
+      <div class="text-center space-y-4 mb-12">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Explore Our Live Stock</h2>
+        <p class="text-slate-400 max-w-2xl mx-auto">
+          We update this list in real-time. Try adding a device or accessory in the **Interactive Admin Demo** above and watch it immediately appear down here!
+        </p>
+      </div>
+
+      <!-- Filters & Controls -->
+      <div class="glassmorphism rounded-2xl p-4 mb-8 flex flex-col md:flex-row md:items-center justify-between gap-4 border border-slate-800">
+        
+        <!-- Category & Brand Filters Wrapper -->
+        <div class="flex flex-col gap-3 overflow-hidden">
+            <!-- Main Category Filter -->
+            <div class="flex gap-2 pb-1 overflow-x-auto hide-scrollbar" id="category-filters">
+                <button onclick="filterCategory('All')" class="cat-btn px-4 py-1.5 rounded-xl text-xs uppercase tracking-wide font-bold transition bg-slate-100 text-slate-900 shadow-md">All Items</button>
+                <button onclick="filterCategory('Phone')" class="cat-btn px-4 py-1.5 rounded-xl text-xs uppercase tracking-wide font-bold transition bg-slate-900 text-slate-400 hover:text-white border border-slate-800">Phones</button>
+                <button onclick="filterCategory('Accessory')" class="cat-btn px-4 py-1.5 rounded-xl text-xs uppercase tracking-wide font-bold transition bg-slate-900 text-slate-400 hover:text-white border border-slate-800">Accessories</button>
+            </div>
+            
+            <!-- Brand Filters -->
+            <div class="flex flex-wrap gap-2" id="brand-filters">
+            <button onclick="filterBrand('All')" class="brand-btn px-4 py-2 rounded-xl text-sm font-semibold transition bg-gradient-to-r from-brand-neonCyan to-brand-neonIndigo text-white">All Brands</button>
+            <button onclick="filterBrand('Apple')" class="brand-btn px-4 py-2 rounded-xl text-sm font-semibold transition bg-slate-900 text-slate-300 hover:bg-slate-850">Apple</button>
+            <button onclick="filterBrand('Samsung')" class="brand-btn px-4 py-2 rounded-xl text-sm font-semibold transition bg-slate-900 text-slate-300 hover:bg-slate-850">Samsung</button>
+            <button onclick="filterBrand('OnePlus')" class="brand-btn px-4 py-2 rounded-xl text-sm font-semibold transition bg-slate-900 text-slate-300 hover:bg-slate-855">OnePlus</button>
+            <button onclick="filterBrand('Other')" class="brand-btn px-4 py-2 rounded-xl text-sm font-semibold transition bg-slate-900 text-slate-300 hover:bg-slate-855">Other Brands</button>
+            </div>
+        </div>
+
+        <!-- Search Input -->
+        <div class="relative w-full md:w-80">
+          <input type="text" id="search-input" onkeyup="searchStock()" placeholder="Search iPhone, AirPods..." class="w-full bg-slate-900/60 border border-slate-800 rounded-xl px-4 py-2.5 pl-10 text-sm focus:outline-none focus:border-brand-neonCyan focus:ring-1 focus:ring-brand-neonCyan text-white">
+          <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3 top-3.5"></i>
+        </div>
+      </div>
+
+      <!-- Catalog Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="stock-grid">
+        <!-- Dynamic Cards Inserted Here via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Exchange Calculator Section -->
+  <section id="exchange-calculator" class="py-20 bg-brand-dark relative overflow-hidden">
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-brand-neonIndigo/5 blur-[120px] rounded-full pointer-events-none"></div>
+
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="glassmorphism rounded-3xl p-6 sm:p-10 border border-slate-800/80 shadow-2xl">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-5 space-y-4">
+            <h2 class="text-2xl sm:text-3xl font-bold text-white">Interactive Exchange Estimator</h2>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              Want to upgrade your phone? Find out how much your old device is worth instantly. Combine your trade-in with our pre-owned stock for maximum discounts!
+            </p>
+            <div class="bg-slate-900/40 p-4 rounded-xl border border-slate-850 space-y-3">
+              <div class="flex items-center gap-3">
+                <i data-lucide="check-circle" class="w-5 h-5 text-emerald-400 shrink-0"></i>
+                <span class="text-xs text-slate-300 font-medium">Get immediate cash or instant discount</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <i data-lucide="check-circle" class="w-5 h-5 text-emerald-400 shrink-0"></i>
+                <span class="text-xs text-slate-300 font-medium">Simple physical inspection at our outlet</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7 bg-slate-900/50 p-6 rounded-2xl border border-slate-800/50 space-y-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-semibold text-slate-400 mb-2 uppercase tracking-wide">Brand</label>
+                <select id="calc-brand" onchange="updateCalcModels()" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-sm focus:outline-none focus:border-brand-neonCyan text-white">
+                  <option value="">Select Brand</option>
+                  <option value="Apple">Apple</option>
+                  <option value="Samsung">Samsung</option>
+                  <option value="OnePlus">OnePlus</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-slate-400 mb-2 uppercase tracking-wide">Model</label>
+                <select id="calc-model" onchange="calculateExchange()" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-sm focus:outline-none focus:border-brand-neonCyan text-white" disabled>
+                  <option value="">Select Brand First</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold text-slate-400 mb-3 uppercase tracking-wide">Device Physical Condition</label>
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                <button onclick="setCalcCondition('Flawless', 1.0, this)" class="cond-btn p-3 bg-slate-950 text-slate-400 hover:text-white border border-slate-850 hover:border-slate-700 rounded-xl text-xs font-medium transition active">
+                  Flawless
+                </button>
+                <button onclick="setCalcCondition('Good', 0.85, this)" class="cond-btn p-3 bg-slate-950 text-slate-400 hover:text-white border border-slate-850 hover:border-slate-700 rounded-xl text-xs font-medium transition">
+                  Good
+                </button>
+                <button onclick="setCalcCondition('Scratched', 0.70, this)" class="cond-btn p-3 bg-slate-950 text-slate-400 hover:text-white border border-slate-850 hover:border-slate-700 rounded-xl text-xs font-medium transition">
+                  Minor Dents
+                </button>
+                <button onclick="setCalcCondition('Broken Screen', 0.40, this)" class="cond-btn p-3 bg-slate-950 text-slate-400 hover:text-white border border-slate-850 hover:border-slate-700 rounded-xl text-xs font-medium transition">
+                  Damaged
+                </button>
+              </div>
+            </div>
+
+            <div class="bg-gradient-to-tr from-brand-neonCyan/10 to-brand-neonIndigo/10 border border-indigo-500/20 rounded-2xl p-5 text-center space-y-2">
+              <span class="text-xs text-slate-400 font-semibold tracking-wide uppercase">Estimated Exchange Value</span>
+              <div class="text-3xl font-extrabold text-white" id="exchange-result">₹0</div>
+              <p class="text-[10px] text-slate-500 px-4">Actual valuation depends on our 45-point testing report. Price shown is indicative.</p>
+            </div>
+
+            <button onclick="sendExchangeWhatsApp()" class="w-full py-4 bg-emerald-600 hover:bg-emerald-500 font-semibold text-white rounded-xl shadow-lg transition flex items-center justify-center gap-2">
+              <i data-lucide="message-square" class="w-4 h-4"></i>
+              <span>Book Exchange via WhatsApp</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location & Footer Section -->
+  <section id="contact" class="py-20 bg-slate-950 border-t border-slate-900 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        <div class="lg:col-span-5 space-y-6">
+          <div class="flex items-center gap-2">
+            <div class="p-2 bg-gradient-to-tr from-brand-neonCyan to-brand-neonIndigo rounded-lg">
+              <i data-lucide="smartphone" class="w-5 h-5 text-white"></i>
+            </div>
+            <span class="text-lg font-bold text-white">ApexMobiles Store</span>
+          </div>
+          <p class="text-slate-400 text-sm">
+            Visit our physical experience store today to feel the phone in your hands before you buy. 
+          </p>
+          <div class="space-y-4">
+            <div class="flex items-start gap-3">
+              <i data-lucide="map-pin" class="w-5 h-5 text-brand-neonCyan shrink-0 mt-0.5"></i>
+              <div>
+                <h4 class="text-xs font-semibold text-slate-300">Our Address</h4>
+                <p class="text-sm text-slate-400">Shop No 14, Dakshin Gangotri Market, Supela, Bhilai, Chhattisgarh 490023</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <i data-lucide="clock" class="w-5 h-5 text-brand-neonCyan shrink-0 mt-0.5"></i>
+              <div>
+                <h4 class="text-xs font-semibold text-slate-300">Store Hours</h4>
+                <p class="text-sm text-slate-400">Monday - Sunday: 11:00 AM to 09:30 PM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 relative h-72 lg:h-auto min-h-[300px] glassmorphism rounded-2xl border border-slate-800 overflow-hidden flex flex-col items-center justify-center p-6 text-center space-y-4">
+          <div class="w-16 h-16 rounded-full bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center">
+            <i data-lucide="map" class="w-8 h-8 text-brand-neonIndigo"></i>
+          </div>
+          <div class="space-y-1">
+            <h4 class="text-base font-bold text-white">Find Us on Google Maps</h4>
+            <p class="text-xs text-slate-400 max-w-sm mx-auto">Get absolute driving directions directly to our store in Dakshin Gangotri Market.</p>
+          </div>
+          <a href="https://maps.google.com" target="_blank" class="px-5 py-2.5 bg-gradient-to-r from-brand-neonCyan to-brand-neonIndigo font-semibold text-xs text-white rounded-lg transition">
+            Open Map Navigation
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Javascript Logic -->
+  <script>
+    // State
+    let currentAdminCategory = 'Phone'; // Phone or Accessory
+
+    // Master Technical Specifications Library
+    const specsLibrary = {
+      Phones: {
+        Apple: {
+            'iPhone 14 Pro Max': { cpu: 'Apple A16 Bionic', camera: '48MP + Dual 12MP', battery: '4323 mAh', screen: '6.7" LTPO 120Hz', image: 'https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&q=80&w=300' },
+            'iPhone 15': { cpu: 'Apple A16 Bionic', camera: '48MP Main + 12MP Ultrawide', battery: '3349 mAh (USB-C)', screen: '6.1" OLED Dynamic Island', image: 'https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&q=80&w=300' },
+            'iPhone 15 Pro': { cpu: 'Apple A17 Pro (3nm)', camera: '48MP Main + 12MP Ultrawide + 3x Tele', battery: '3274 mAh (USB-C 3)', screen: '6.1" LTPO 120Hz Titanium', image: 'https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&q=80&w=300' },
+            'iPhone 15 Pro Max': { cpu: 'Apple A17 Pro (3nm)', camera: '48MP Main + 5x Tetraprism Telephoto', battery: '4422 mAh (USB-C 3)', screen: '6.7" LTPO 120Hz Titanium', image: 'https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&q=80&w=300' },
+            'iPhone 16': { cpu: 'Apple A18 Bionic', camera: '48MP Fusion + 12MP Ultrawide', battery: '3561 mAh', screen: '6.1" OLED Dynamic Island', image: 'https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&q=80&w=300' },
+            'iPhone 16 Pro': { cpu: 'Apple A18 Pro (3nm)', camera: '48MP Fusion + 48MP Ultrawide + 5x Tele', battery: '3582 mAh', screen: '6.3" LTPO 120Hz Titanium', image: 'https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&q=80&w=300' },
+            'iPhone 16 Pro Max': { cpu: 'Apple A18 Pro (3nm)', camera: '48MP Fusion + 48MP Ultrawide + 5x Tele', battery: '4685 mAh', screen: '6.9" LTPO 120Hz Titanium', image: 'https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&q=80&w=300' },
+            'iPhone 17': { cpu: 'Apple A19 Bionic', camera: '48MP Advanced Fusion', battery: '3800 mAh', screen: '6.1" OLED 120Hz (ProMotion)', image: 'https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&q=80&w=300' },
+            'iPhone 17 Pro': { cpu: 'Apple A19 Pro (2nm)', camera: '48MP Triple Advanced Array', battery: '3900 mAh', screen: '6.3" LTPO 120Hz Titanium', image: 'https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&q=80&w=300' },
+            'iPhone 17 Pro Max': { cpu: 'Apple A19 Pro (2nm)', camera: '48MP Triple Advanced Array', battery: '4800 mAh', screen: '6.9" LTPO 120Hz Titanium', image: 'https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&q=80&w=300' }
+        },
+        Samsung: {
+            'Galaxy S24 Ultra': { cpu: 'Snapdragon 8 Gen 3', camera: '200MP + 50MP Tele + 10MP + 12MP', battery: '5000 mAh', screen: '6.8" Dynamic AMOLED (Flat)', image: 'https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&q=80&w=300' },
+            'Galaxy S25': { cpu: 'Snapdragon 8 Gen 4', camera: '50MP Triple Camera with AI', battery: '4100 mAh', screen: '6.2" Dynamic AMOLED 120Hz', image: 'https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?auto=format&fit=crop&q=80&w=300' },
+            'Galaxy S25 Ultra': { cpu: 'Snapdragon 8 Gen 4', camera: '200MP ISOCELL + 50MP + 50MP', battery: '5000 mAh', screen: '6.9" Dynamic AMOLED 2X', image: 'https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&q=80&w=300' },
+            'Galaxy S26 Ultra': { cpu: 'Snapdragon 8 Gen 5', camera: '200MP Advanced AI Array', battery: '5200 mAh', screen: '6.9" Dynamic AMOLED 3X', image: 'https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&q=80&w=300' }
+        },
+        OnePlus: {
+            'OnePlus 12': { cpu: 'Snapdragon 8 Gen 3', camera: '50MP + 64MP Periscope + 48MP', battery: '5400 mAh (100W)', screen: '6.82" 2K 120Hz', image: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&q=80&w=300' },
+            'OnePlus 13': { cpu: 'Snapdragon 8 Gen 4', camera: '50MP Sony Lytia Triple Camera', battery: '6000 mAh (100W)', screen: '6.8" 2K 120Hz OLED', image: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&q=80&w=300' },
+            'OnePlus 14': { cpu: 'Snapdragon 8 Gen 5', camera: '50MP Hasselblad Master Array', battery: '6200 mAh (120W)', screen: '6.8" 2K 144Hz OLED', image: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&q=80&w=300' }
+        }
+      },
+      Accessories: {
+        Apple: {
+            'AirPods Pro (2nd Gen)': { spec1: 'Audio', spec1val: 'H2 Chip & Active Noise Cancellation', spec2: 'Connectivity', spec2val: 'Bluetooth 5.3', spec3: 'Battery', spec3val: 'Up to 30 hrs with Case', spec4: 'Feature', spec4val: 'MagSafe / USB-C Case' },
+            '20W USB-C Power Adapter': { spec1: 'Type', spec1val: 'Wall Charger', spec2: 'Connectivity', spec2val: 'USB-C Port', spec3: 'Output', spec3val: '20W Fast Charge', spec4: 'Compatibility', spec4val: 'iPhone 8 or later, iPad' }
+        },
+        Samsung: {
+            'Galaxy Buds2 Pro': { spec1: 'Audio', spec1val: '24-bit Hi-Fi Audio & ANC', spec2: 'Connectivity', spec2val: 'Bluetooth 5.3', spec3: 'Battery', spec3val: 'Up to 18 hrs with Case', spec4: 'Feature', spec4val: 'IPX7 Water Resistance' }
+        },
+        JBL: {
+            'JBL Flip 6': { spec1: 'Type', spec1val: 'Portable Bluetooth Speaker', spec2: 'Connectivity', spec2val: 'Bluetooth 5.1', spec3: 'Battery', spec3val: 'Up to 12 Hours Playtime', spec4: 'Feature', spec4val: 'IP67 Waterproof' }
+        },
+        Sony: {
+             'WF-1000XM5': { spec1: 'Audio', spec1val: 'Industry Leading Noise Cancellation', spec2: 'Connectivity', spec2val: 'Bluetooth 5.3 (LDAC)', spec3: 'Battery', spec3val: 'Up to 24 hrs with Case', spec4: 'Feature', spec4val: 'AI-based Noise Reduction' }
+        }
+      }
+    };
+
+    // Live Stock Catalog Array
+    const stockData = [
+      { id: 1, type: 'Phone', brand: 'Apple', model: 'iPhone 16 Pro Max', specs: '256GB - Desert Titanium', condition: 'Brand New Sealed', price: 144900, originalPrice: 144900, battery: '100% Health', image: 'https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&q=80&w=300' },
+      { id: 2, type: 'Phone', brand: 'Apple', model: 'iPhone 15 Pro Max', specs: '256GB - Natural Titanium', condition: 'Like New (99%)', price: 114999, originalPrice: 159900, battery: '98% Health', image: 'https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&q=80&w=300' },
+      { id: 3, type: 'Phone', brand: 'Samsung', model: 'Galaxy S25 Ultra', specs: '512GB - Titanium Black', condition: 'Brand New Sealed', price: 125000, originalPrice: 139999, battery: '100% Health', image: 'https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&q=80&w=300' },
+      { id: 4, type: 'Accessory', brand: 'Apple', model: 'AirPods Pro (2nd Gen)', specs: 'White - USB-C', condition: 'Brand New Sealed', price: 19999, originalPrice: 24900, battery: null, image: 'https://images.unsplash.com/photo-1606220838315-056192d5e921?auto=format&fit=crop&q=80&w=300' },
+      { id: 5, type: 'Phone', brand: 'OnePlus', model: 'OnePlus 13', specs: '512GB - Obsidian Black', condition: 'Like New', price: 66999, originalPrice: 74999, battery: '99% Health', image: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&q=80&w=300' },
+      { id: 6, type: 'Accessory', brand: 'Apple', model: '20W USB-C Power Adapter', specs: 'White', condition: 'Brand New Sealed', price: 1499, originalPrice: 1900, battery: null, image: 'https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&q=80&w=300' }
+    ];
+
+    let activeBrand = 'All';
+    let activeCategory = 'All'; // All, Phone, Accessory
+
+    // Initialize Page
+    window.onload = function() {
+      lucide.createIcons();
+      renderStock();
+    };
+
+    function setFormCategory(cat) {
+      currentAdminCategory = cat;
+      
+      const btnPhone = document.getElementById('form-cat-phone');
+      const btnAcc = document.getElementById('form-cat-acc');
+      
+      if(cat === 'Phone') {
+        btnPhone.className = 'px-3 py-1.5 text-xs font-semibold rounded-md bg-slate-800 text-white transition flex items-center gap-1.5 shadow-sm';
+        btnAcc.className = 'px-3 py-1.5 text-xs font-semibold rounded-md text-slate-400 hover:text-white transition flex items-center gap-1.5';
+        
+        document.getElementById('form-phone-fields').classList.remove('hidden');
+        document.getElementById('form-acc-fields').classList.add('hidden');
+        document.getElementById('form-battery-container').classList.remove('hidden');
+        document.querySelectorAll('.acc-brand').forEach(el => el.classList.add('hidden'));
+      } else {
+        btnAcc.className = 'px-3 py-1.5 text-xs font-semibold rounded-md bg-slate-800 text-white transition flex items-center gap-1.5 shadow-sm';
+        btnPhone.className = 'px-3 py-1.5 text-xs font-semibold rounded-md text-slate-400 hover:text-white transition flex items-center gap-1.5';
+        
+        document.getElementById('form-phone-fields').classList.add('hidden');
+        document.getElementById('form-acc-fields').classList.remove('hidden');
+        document.getElementById('form-battery-container').classList.add('hidden');
+        document.querySelectorAll('.acc-brand').forEach(el => el.classList.remove('hidden'));
+      }
+
+      document.getElementById('form-brand').value = '';
+      updateFormModels();
+      lucide.createIcons();
+    }
+
+    function updateFormModels() {
+      const brand = document.getElementById('form-brand').value;
+      const modelSelect = document.getElementById('form-model');
+      const modelInput = document.getElementById('form-custom-model');
+      
+      resetFormSpecs();
+
+      if(!brand) {
+        modelSelect.classList.remove('hidden');
+        modelInput.classList.add('hidden');
+        modelSelect.innerHTML = '<option value="">Choose Brand First</option>';
+        modelSelect.disabled = true;
+        document.getElementById('model-label').textContent = '2. Select Model';
+        return;
+      }
+
+      if (brand === 'Other') {
+          // Custom Accessory or Phone
+          modelSelect.classList.add('hidden');
+          modelInput.classList.remove('hidden');
+          modelInput.value = '';
+          document.getElementById('model-label').textContent = '2. Enter Item Name (Custom)';
+          
+          // Setup custom badges
+          setCustomSpecsUI();
+          return;
+      } else {
+          modelSelect.classList.remove('hidden');
+          modelInput.classList.add('hidden');
+          document.getElementById('model-label').textContent = '2. Select Model';
+      }
+
+      const categoryData = currentAdminCategory === 'Phone' ? specsLibrary.Phones : specsLibrary.Accessories;
+      
+      if (!categoryData[brand]) {
+         modelSelect.innerHTML = '<option value="">No models for this brand</option>';
+         modelSelect.disabled = true;
+         return;
+      }
+
+      modelSelect.disabled = false;
+      modelSelect.innerHTML = '<option value="">Choose Model</option>';
+      
+      const models = Object.keys(categoryData[brand]);
+      models.forEach(model => {
+        const option = document.createElement('option');
+        option.value = model;
+        option.textContent = model;
+        modelSelect.appendChild(option);
+      });
+    }
+
+    function setCustomSpecsUI() {
+        document.getElementById('spec-1-label').textContent = 'Product Type';
+        document.getElementById('spec-2-label').textContent = 'Brand Info';
+        document.getElementById('spec-3-label').textContent = 'Tech Details';
+        document.getElementById('spec-4-label').textContent = 'Compatibility';
+        
+        document.getElementById('spec-1-icon').setAttribute('data-lucide', 'help-circle');
+        document.getElementById('spec-2-icon').setAttribute('data-lucide', 'tag');
+        document.getElementById('spec-3-icon').setAttribute('data-lucide', 'settings');
+        document.getElementById('spec-4-icon').setAttribute('data-lucide', 'link');
+
+        document.getElementById('spec-1-val').textContent = currentAdminCategory;
+        document.getElementById('spec-2-val').textContent = 'Custom Brand Entry';
+        document.getElementById('spec-3-val').textContent = 'Specs Unlisted';
+        document.getElementById('spec-4-val').textContent = 'Universal / N/A';
+        
+        lucide.createIcons();
+
+        document.querySelectorAll('.spec-badge').forEach(el => {
+            el.style.opacity = '1';
+            el.textContent = 'Custom Entry';
+            el.className = 'text-[10px] text-amber-400 bg-amber-500/10 px-2 py-0.5 rounded font-medium border border-amber-500/20 spec-badge';
+        });
+
+        const boxIds = ['spec-1-box', 'spec-2-box', 'spec-3-box', 'spec-4-box'];
+        boxIds.forEach(id => {
+            const box = document.getElementById(id);
+            box.classList.remove('border-emerald-500/50', 'bg-emerald-950/10', 'pulse-green');
+            box.classList.add('border-amber-500/30', 'bg-amber-950/10');
+        });
+        
+        document.getElementById('form-price').value = 1999;
+    }
+
+    function handleModelChange() {
+      const brand = document.getElementById('form-brand').value;
+      if (brand === 'Other') return; // Handled by setCustomSpecsUI
+      
+      const model = document.getElementById('form-model').value;
+      if(!brand || !model) {
+        resetFormSpecs();
+        return;
+      }
+
+      const categoryData = currentAdminCategory === 'Phone' ? specsLibrary.Phones : specsLibrary.Accessories;
+      const specs = categoryData[brand][model];
+
+      if(currentAdminCategory === 'Phone') {
+          document.getElementById('spec-1-label').textContent = 'Processor (CPU)';
+          document.getElementById('spec-2-label').textContent = 'Camera Megapixels';
+          document.getElementById('spec-3-label').textContent = 'Standard Battery Size';
+          document.getElementById('spec-4-label').textContent = 'Screen Display Size';
+          
+          document.getElementById('spec-1-icon').setAttribute('data-lucide', 'cpu');
+          document.getElementById('spec-2-icon').setAttribute('data-lucide', 'camera');
+          document.getElementById('spec-3-icon').setAttribute('data-lucide', 'battery');
+          document.getElementById('spec-4-icon').setAttribute('data-lucide', 'maximize');
+
+          document.getElementById('spec-1-val').textContent = specs.cpu;
+          document.getElementById('spec-2-val').textContent = specs.camera;
+          document.getElementById('spec-3-val').textContent = specs.battery;
+          document.getElementById('spec-4-val').textContent = specs.screen;
+      } else {
+          document.getElementById('spec-1-label').textContent = specs.spec1;
+          document.getElementById('spec-2-label').textContent = specs.spec2;
+          document.getElementById('spec-3-label').textContent = specs.spec3;
+          document.getElementById('spec-4-label').textContent = specs.spec4;
+          
+          document.getElementById('spec-1-icon').setAttribute('data-lucide', 'info');
+          document.getElementById('spec-2-icon').setAttribute('data-lucide', 'zap');
+          document.getElementById('spec-3-icon').setAttribute('data-lucide', 'battery-charging');
+          document.getElementById('spec-4-icon').setAttribute('data-lucide', 'check-circle');
+
+          document.getElementById('spec-1-val').textContent = specs.spec1val;
+          document.getElementById('spec-2-val').textContent = specs.spec2val;
+          document.getElementById('spec-3-val').textContent = specs.spec3val;
+          document.getElementById('spec-4-val').textContent = specs.spec4val;
+      }
+
+      lucide.createIcons();
+
+      document.querySelectorAll('.spec-badge').forEach(el => {
+          el.style.opacity = '1';
+          el.textContent = 'Auto-Filled';
+          el.className = 'text-[10px] text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded font-medium border border-emerald-500/10 animate-bounce spec-badge';
+      });
+
+      const boxIds = ['spec-1-box', 'spec-2-box', 'spec-3-box', 'spec-4-box'];
+      boxIds.forEach(id => {
+        const box = document.getElementById(id);
+        box.classList.remove('border-amber-500/30', 'bg-amber-950/10');
+        box.classList.add('border-emerald-500/50', 'bg-emerald-950/10', 'pulse-green');
+      });
+
+      const dummyBasePrices = {
+        'iPhone 16 Pro Max': 144900, 'iPhone 17 Pro': 134900, 'Galaxy S25 Ultra': 125000,
+        'OnePlus 14': 74999, 'AirPods Pro (2nd Gen)': 19999, '20W USB-C Power Adapter': 1499
+      };
+      if (dummyBasePrices[model]) {
+        document.getElementById('form-price').value = dummyBasePrices[model];
+      }
+    }
+
+    function resetFormSpecs() {
+      const ids = ['spec-1-val', 'spec-2-val', 'spec-3-val', 'spec-4-val'];
+      ids.forEach(id => document.getElementById(id).textContent = '--');
+
+      document.querySelectorAll('.spec-badge').forEach(el => el.style.opacity = '0');
+      const boxIds = ['spec-1-box', 'spec-2-box', 'spec-3-box', 'spec-4-box'];
+      boxIds.forEach(id => {
+        const box = document.getElementById(id);
+        box.classList.remove('border-emerald-500/50', 'bg-emerald-950/10', 'pulse-green', 'border-amber-500/30', 'bg-amber-950/10');
+      });
+    }
+
+    function simulateAddStock() {
+      let brand = document.getElementById('form-brand').value;
+      let model = '';
+      
+      if (brand === 'Other') {
+          brand = 'Custom Brand';
+          model = document.getElementById('form-custom-model').value;
+      } else {
+          model = document.getElementById('form-model').value;
+      }
+      
+      const price = parseInt(document.getElementById('form-price').value);
+      
+      let specsStr = '';
+      let condition = '';
+      let battery = null;
+
+      if(!brand || !model || !price) {
+        alert('Please fill out the Brand and Model to simulate adding!');
+        return;
+      }
+
+      if(currentAdminCategory === 'Phone') {
+          const rom = document.getElementById('form-rom').value;
+          const color = document.getElementById('form-color').value;
+          condition = document.getElementById('form-condition').value;
+          battery = document.getElementById('form-battery').value;
+          specsStr = `${rom} - ${color}`;
+      } else {
+          const variant = document.getElementById('form-acc-variant').value;
+          condition = document.getElementById('form-acc-condition').value;
+          specsStr = variant;
+      }
+
+      let fallbackImage = 'https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&q=80&w=300';
+      if(brand !== 'Custom Brand') {
+          if(currentAdminCategory === 'Phone' && specsLibrary.Phones[brand] && specsLibrary.Phones[brand][model]) {
+              fallbackImage = specsLibrary.Phones[brand][model].image;
+          }
+          if(currentAdminCategory === 'Accessory' && specsLibrary.Accessories[brand] && specsLibrary.Accessories[brand][model]) {
+              fallbackImage = 'https://images.unsplash.com/photo-1606220838315-056192d5e921?auto=format&fit=crop&q=80&w=300';
+          }
+      }
+      
+      const newItem = {
+        id: stockData.length + 1,
+        type: currentAdminCategory,
+        brand: brand,
+        model: model,
+        specs: specsStr,
+        condition: condition,
+        price: price,
+        originalPrice: Math.round(price * 1.3),
+        battery: battery,
+        image: fallbackImage,
+        isCustom: (brand === 'Custom Brand')
+      };
+
+      stockData.unshift(newItem); 
+      renderStock();
+      document.getElementById('store-stock').scrollIntoView({ behavior: 'smooth' });
+
+      document.getElementById('form-brand').value = '';
+      updateFormModels();
+      alert(`🎉 SUCCESS!\n"${model}" has been added. Watch the top card in the catalog below!`);
+    }
+
+    function filterCategory(catName) {
+      activeCategory = catName;
+      const buttons = document.querySelectorAll('#category-filters button');
+      buttons.forEach(btn => {
+        if(btn.textContent.includes(catName) || (catName === 'All' && btn.textContent.includes('All Items'))) {
+          btn.className = 'cat-btn px-4 py-1.5 rounded-xl text-xs uppercase tracking-wide font-bold transition bg-slate-100 text-slate-900 shadow-md';
+        } else {
+          btn.className = 'cat-btn px-4 py-1.5 rounded-xl text-xs uppercase tracking-wide font-bold transition bg-slate-900 text-slate-400 hover:text-white border border-slate-800';
+        }
+      });
+      renderStock();
+    }
+
+    function filterBrand(brandName) {
+      activeBrand = brandName;
+      const buttons = document.querySelectorAll('#brand-filters button');
+      buttons.forEach(btn => {
+        if(btn.textContent.includes(brandName) || (brandName === 'All' && btn.textContent.includes('All Brands'))) {
+          btn.className = 'brand-btn px-4 py-2 rounded-xl text-sm font-semibold transition bg-gradient-to-r from-brand-neonCyan to-brand-neonIndigo text-white';
+        } else {
+          btn.className = 'brand-btn px-4 py-2 rounded-xl text-sm font-semibold transition bg-slate-900 text-slate-300 hover:bg-slate-800';
+        }
+      });
+      renderStock();
+    }
+
+    function searchStock() {
+      const query = document.getElementById('search-input').value.toLowerCase();
+      const cards = document.querySelectorAll('#stock-grid > div');
+      cards.forEach(card => {
+        const text = card.textContent.toLowerCase();
+        if(text.includes(query)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    function renderStock() {
+      const grid = document.getElementById('stock-grid');
+      grid.innerHTML = '';
+      
+      const filtered = stockData.filter(item => {
+        const matchesBrand = activeBrand === 'All' || item.brand === activeBrand || (activeBrand === 'Other' && item.isCustom);
+        const matchesCategory = activeCategory === 'All' || item.type === activeCategory;
+        return matchesBrand && matchesCategory;
+      });
+
+      if(filtered.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full py-12 text-center text-slate-500">
+            <i data-lucide="package-open" class="w-12 h-12 mx-auto mb-3 opacity-60"></i>
+            <p class="text-sm">No match found for this filter. Please try another selection.</p>
+          </div>
+        `;
+        lucide.createIcons();
+        return;
+      }
+
+      filtered.forEach(item => {
+        const discount = item.originalPrice ? Math.round(((item.originalPrice - item.price) / item.originalPrice) * 100) : 10;
+        
+        let techSpecs = '';
+        
+        if (!item.isCustom) {
+            const catData = item.type === 'Phone' ? specsLibrary.Phones : specsLibrary.Accessories;
+            if(catData[item.brand] && catData[item.brand][item.model]) {
+              const l = catData[item.brand][item.model];
+              if(item.type === 'Phone') {
+                  techSpecs = `
+                    <div class="mt-3.5 pt-3.5 border-t border-slate-900/60 grid grid-cols-2 gap-2 text-[10px] text-slate-400">
+                      <div class="flex items-center gap-1.5"><i data-lucide="cpu" class="w-3.5 h-3.5 text-brand-neonCyan"></i><span class="truncate">${l.cpu.split(' ')[0]} CPU</span></div>
+                      <div class="flex items-center gap-1.5"><i data-lucide="camera" class="w-3.5 h-3.5 text-brand-neonCyan"></i><span class="truncate">${l.camera.split(' ')[0]} Cam</span></div>
+                      <div class="flex items-center gap-1.5"><i data-lucide="battery" class="w-3.5 h-3.5 text-brand-neonCyan"></i><span class="truncate">${l.battery.split(' ')[0]} mAh</span></div>
+                      <div class="flex items-center gap-1.5"><i data-lucide="maximize" class="w-3.5 h-3.5 text-brand-neonCyan"></i><span class="truncate">${l.screen.split('"')[0]}" Display</span></div>
+                    </div>
+                  `;
+              } else {
+                   techSpecs = `
+                    <div class="mt-3.5 pt-3.5 border-t border-slate-900/60 grid grid-cols-2 gap-2 text-[10px] text-slate-400">
+                      <div class="flex items-center gap-1.5"><i data-lucide="info" class="w-3.5 h-3.5 text-brand-neonCyan"></i><span class="truncate">${l.spec1val}</span></div>
+                      <div class="flex items-center gap-1.5"><i data-lucide="zap" class="w-3.5 h-3.5 text-brand-neonCyan"></i><span class="truncate">${l.spec2val}</span></div>
+                    </div>
+                  `;
+              }
+            }
+        }
+
+        const iconType = item.type === 'Phone' ? 'smartphone' : (item.isCustom ? 'box' : 'headphones');
+
+        const card = document.createElement('div');
+        card.className = 'glassmorphism rounded-2xl overflow-hidden border border-slate-800/80 flex flex-col justify-between hover:scale-[1.01] hover:border-slate-700 transition duration-300';
+        card.innerHTML = `
+          <div class="relative bg-slate-900/40 p-4 pb-0">
+            <div class="absolute top-4 left-4 flex gap-1.5 z-10 flex-wrap">
+              <span class="px-2.5 py-1 rounded-lg text-[10px] font-bold tracking-wide uppercase bg-gradient-to-r from-cyan-600 to-indigo-600 text-white">${item.condition}</span>
+              ${discount > 0 ? `<span class="px-2.5 py-1 rounded-lg text-[10px] font-bold bg-emerald-600/90 text-white">${discount}% OFF</span>` : ''}
+            </div>
+            <div class="h-40 w-full bg-slate-900 rounded-xl overflow-hidden flex items-center justify-center border border-slate-850/80 relative">
+              <i data-lucide="${iconType}" class="w-16 h-16 text-slate-800 opacity-60 absolute"></i>
+              <img src="${item.image}" alt="${item.model}" class="h-full w-full object-cover mix-blend-screen opacity-90 transition hover:scale-105 duration-300" onerror="this.style.display='none'">
+            </div>
+          </div>
+
+          <div class="p-5 space-y-4">
+            <div class="space-y-1">
+              <div class="flex items-center justify-between">
+                <div class="text-[10px] font-bold text-brand-neonCyan uppercase tracking-widest">${item.brand}</div>
+                <div class="text-[10px] text-slate-500 uppercase tracking-widest bg-slate-900 px-2 py-0.5 rounded border border-slate-800">${item.type}</div>
+              </div>
+              <h3 class="text-lg font-bold text-white leading-tight">${item.model}</h3>
+              <p class="text-xs text-slate-400">${item.specs} ${item.battery ? `&bull; ${item.battery}` : ''}</p>
+            </div>
+
+            ${techSpecs}
+
+            <div class="flex items-baseline justify-between border-t border-slate-900 pt-3.5">
+              <div>
+                ${item.originalPrice ? `<span class="text-xs text-slate-500 line-through mr-1.5">₹${item.originalPrice.toLocaleString('en-IN')}</span>` : ''}
+                <span class="text-xl font-extrabold text-white">₹${item.price.toLocaleString('en-IN')}</span>
+              </div>
+            </div>
+
+            <button onclick="sendInquiryWhatsApp('${item.brand}', '${item.model}', '${item.specs}', ${item.price}, '${item.condition}')" class="w-full py-3 bg-slate-900 hover:bg-slate-850 text-slate-200 border border-slate-800 hover:border-slate-700 font-semibold rounded-xl text-xs flex items-center justify-center gap-2 transition">
+              <i data-lucide="message-square" class="w-3.5 h-3.5 text-emerald-400"></i>
+              <span>Check Availability</span>
+            </button>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+
+      lucide.createIcons();
+    }
+
+    const modelRates = { Apple: { 'iPhone 15 Pro': 85000, 'iPhone 16 Pro Max': 120000 }, Samsung: { 'Galaxy S25 Ultra': 95000 } };
+    let selectedMultiplier = 1.0; let selectedCondition = 'Flawless';
+    
+    function updateCalcModels() {
+      const brand = document.getElementById('calc-brand').value;
+      const modelSelect = document.getElementById('calc-model');
+      modelSelect.innerHTML = brand ? '<option value="">Select Model</option>' : '<option value="">Select Brand First</option>';
+      modelSelect.disabled = !brand;
+      if(!brand) return;
+      Object.keys(modelRates[brand]).forEach(model => {
+        const option = document.createElement('option'); option.value = model; option.textContent = model;
+        modelSelect.appendChild(option);
+      });
+    }
+
+    function setCalcCondition(name, val, element) {
+      selectedMultiplier = val; selectedCondition = name;
+      document.querySelectorAll('.cond-btn').forEach(btn => {
+        btn.classList.remove('bg-gradient-to-r', 'from-brand-neonCyan', 'to-brand-neonIndigo', 'text-white');
+        btn.classList.add('bg-slate-950', 'text-slate-400');
+      });
+      element.classList.remove('bg-slate-950', 'text-slate-400');
+      element.classList.add('bg-gradient-to-r', 'from-brand-neonCyan', 'to-brand-neonIndigo', 'text-white');
+      calculateExchange();
+    }
+
+    function calculateExchange() {
+      const brand = document.getElementById('calc-brand').value; const model = document.getElementById('calc-model').value;
+      if(!brand || !model) { document.getElementById('exchange-result').textContent = '₹0'; return; }
+      document.getElementById('exchange-result').textContent = '₹' + Math.round(modelRates[brand][model] * selectedMultiplier).toLocaleString('en-IN');
+    }
+
+    function sendInquiryWhatsApp(brand, model, specs, price, condition) {
+      const text = `Hello ApexMobiles! I saw your online stock listing. Is this item still available?\n\n📦 Item: ${brand} ${model}\n⚙️ Specs: ${specs}\n💎 Condition: ${condition}\n🏷️ Website Price: ₹${price.toLocaleString('en-IN')}`;
+      window.open(`https://wa.me/919876543210?text=${encodeURIComponent(text)}`, '_blank');
+    }
+
+    function sendExchangeWhatsApp() {
+      const brand = document.getElementById('calc-brand').value; const model = document.getElementById('calc-model').value;
+      if(!brand || !model) return alert('Please select a Brand and Model first.');
+      const val = document.getElementById('exchange-result').textContent;
+      const text = `Hello ApexMobiles! I want to trade-in my phone.\n\n📱 Old Device: ${brand} ${model}\n💎 Condition: ${selectedCondition}\n💰 Estimate: ${val}`;
+      window.open(`https://wa.me/919876543210?text=${encodeURIComponent(text)}`, '_blank');
+    }
+  </script>
+</body>
+</html>

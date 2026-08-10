@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>स्मार्ट दुग्ध समिति (Smart Dairy POS)</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        dairy: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #f1f5f9; }
+        .glass-card {
+            background: white;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            border: 1px solid #e2e8f0;
+        }
+    </style>
+</head>
+<body class="text-slate-800 antialiased h-screen flex overflow-hidden">
+
+    <!-- Sidebar (Desktop) -->
+    <aside class="w-64 bg-dairy-900 text-white hidden md:flex flex-col shadow-xl z-20">
+        <div class="p-6 flex items-center gap-3 border-b border-dairy-800">
+            <div class="bg-white p-2 rounded-lg">
+                <i data-lucide="droplets" class="w-6 h-6 text-dairy-600"></i>
+            </div>
+            <div>
+                <h1 class="font-bold text-xl tracking-tight">स्मार्ट डेयरी</h1>
+                <p class="text-[10px] text-dairy-200 uppercase tracking-widest">Dugdh Samiti</p>
+            </div>
+        </div>
+        
+        <nav class="flex-1 px-4 py-6 space-y-2">
+            <a href="#" class="flex items-center gap-3 px-4 py-3 bg-dairy-800 rounded-xl font-medium transition shadow-inner">
+                <i data-lucide="layout-dashboard" class="w-5 h-5"></i> डैशबोर्ड (Dashboard)
+            </a>
+            <a href="#" class="flex items-center gap-3 px-4 py-3 text-dairy-100 hover:bg-dairy-800 rounded-xl font-medium transition">
+                <i data-lucide="flask-conical" class="w-5 h-5"></i> दूध संकलन (Collection)
+            </a>
+            <a href="#" class="flex items-center gap-3 px-4 py-3 text-dairy-100 hover:bg-dairy-800 rounded-xl font-medium transition">
+                <i data-lucide="file-text" class="w-5 h-5"></i> भुगतान रजिस्टर (Ledger)
+            </a>
+            <a href="#" class="flex items-center gap-3 px-4 py-3 text-dairy-100 hover:bg-dairy-800 rounded-xl font-medium transition">
+                <i data-lucide="users" class="w-5 h-5"></i> किसान सूची (Farmers)
+            </a>
+            <a href="#" class="flex items-center gap-3 px-4 py-3 text-dairy-100 hover:bg-dairy-800 rounded-xl font-medium transition">
+                <i data-lucide="settings" class="w-5 h-5"></i> सेटिंग्स (Settings)
+            </a>
+        </nav>
+
+        <div class="p-4 border-t border-dairy-800">
+            <div class="flex items-center gap-3 px-4 py-2">
+                <div class="w-8 h-8 rounded-full bg-dairy-500 flex items-center justify-center font-bold text-sm">SP</div>
+                <div>
+                    <p class="text-sm font-semibold">सरस्वती दुग्ध समिति</p>
+                    <p class="text-xs text-dairy-200">व्यवस्थापक (Admin)</p>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 flex flex-col h-screen overflow-hidden relative">
+        
+        <!-- Mobile Header -->
+        <header class="md:hidden bg-dairy-900 text-white p-4 flex justify-between items-center shadow-md z-20">
+            <div class="flex items-center gap-2">
+                <i data-lucide="droplets" class="w-5 h-5 text-dairy-400"></i>
+                <h1 class="font-bold text-lg">स्मार्ट डेयरी</h1>
+            </div>
+            <i data-lucide="menu" class="w-6 h-6"></i>
+        </header>
+
+        <!-- Scrollable Dashboard -->
+        <div class="flex-1 overflow-y-auto p-4 md:p-8">
+            
+            <div class="flex justify-between items-end mb-8">
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-800">डैशबोर्ड (Dashboard)</h2>
+                    <p class="text-sm text-slate-500">आज का संकलन विवरण (Today's Collection Summary)</p>
+                </div>
+                <div class="flex items-center gap-2 bg-white px-4 py-2 rounded-lg border border-slate-200 shadow-sm font-bold text-slate-700">
+                    <i data-lucide="sun" class="w-5 h-5 text-amber-500"></i> सुबह की पाली (Morning Shift)
+                </div>
+            </div>
+
+            <!-- 4 Top Stat Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                <!-- Card 1 -->
+                <div class="glass-card p-5 border-l-4 border-dairy-500">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <p class="text-xs font-bold text-slate-500 uppercase tracking-wide">कुल दूध (Total Milk)</p>
+                            <h3 class="text-2xl font-extrabold text-slate-800 mt-1">452.5 लीटर</h3>
+                        </div>
+                        <div class="p-2 bg-dairy-50 rounded-lg"><i data-lucide="beaker" class="w-5 h-5 text-dairy-600"></i></div>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-3">आज सुबह का संकलन</p>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="glass-card p-5 border-l-4 border-amber-500">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <p class="text-xs font-bold text-slate-500 uppercase tracking-wide">औसत फैट (Avg FAT %)</p>
+                            <h3 class="text-2xl font-extrabold text-slate-800 mt-1">6.8 %</h3>
+                        </div>
+                        <div class="p-2 bg-amber-50 rounded-lg"><i data-lucide="activity" class="w-5 h-5 text-amber-600"></i></div>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-3">उत्कृष्ट गुणवत्ता (Excellent Quality)</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="glass-card p-5 border-l-4 border-green-500">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <p class="text-xs font-bold text-slate-500 uppercase tracking-wide">कुल भुगतान (Total Payout)</p>
+                            <h3 class="text-2xl font-extrabold text-slate-800 mt-1">₹ 22,450</h3>
+                        </div>
+                        <div class="p-2 bg-green-50 rounded-lg"><i data-lucide="banknote" class="w-5 h-5 text-green-600"></i></div>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-3">आज की देय राशि</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="glass-card p-5 border-l-4 border-purple-500">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <p class="text-xs font-bold text-slate-500 uppercase tracking-wide">कुल किसान (Total Farmers)</p>
+                            <h3 class="text-2xl font-extrabold text-slate-800 mt-1">84</h3>
+                        </div>
+                        <div class="p-2 bg-purple-50 rounded-lg"><i data-lucide="users" class="w-5 h-5 text-purple-600"></i></div>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-3">जिन्होंने आज दूध दिया</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+                
+                <!-- Quick Collection Panel (दूध संकलन) -->
+                <div class="glass-card flex flex-col bg-white border-2 border-dairy-100">
+                    <div class="p-5 border-b border-slate-100 bg-dairy-50 rounded-t-2xl flex justify-between items-center">
+                        <h3 class="font-bold text-slate-800 flex items-center gap-2 text-lg">
+                            <i data-lucide="plus-circle" class="w-6 h-6 text-dairy-600"></i>
+                            नया संकलन (New Collection Entry)
+                        </h3>
+                    </div>
+                    <div class="p-6 space-y-5">
+                        
+                        <!-- Farmer ID / Name -->
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-1">किसान कोड (Farmer ID / Name)</label>
+                            <input type="text" id="farmer-name" placeholder="उदा. 101 या रमेश कुमार" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-4 py-3 text-lg font-bold focus:outline-none focus:border-dairy-500 focus:ring-2 focus:ring-dairy-200 transition">
+                        </div>
+
+                        <!-- Milk Details Row -->
+                        <div class="grid grid-cols-3 gap-4">
+                            <div>
+                                <label class="block text-sm font-bold text-slate-700 mb-1">मात्रा (Liters)</label>
+                                <input type="number" id="milk-volume" oninput="calculateRate()" placeholder="0.0" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-4 py-3 text-lg font-bold focus:outline-none focus:border-dairy-500 focus:ring-2 focus:ring-dairy-200 transition text-center">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-slate-700 mb-1">फैट (FAT %)</label>
+                                <input type="number" id="milk-fat" oninput="calculateRate()" placeholder="0.0" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-4 py-3 text-lg font-bold text-amber-600 focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-200 transition text-center">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-slate-700 mb-1">SNF %</label>
+                                <input type="number" id="milk-snf" oninput="calculateRate()" placeholder="8.5" value="8.5" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-4 py-3 text-lg font-bold text-slate-600 focus:outline-none focus:border-slate-500 focus:ring-2 focus:ring-slate-200 transition text-center">
+                            </div>
+                        </div>
+
+                        <!-- Auto-Calculated Price Box -->
+                        <div class="bg-gradient-to-r from-slate-800 to-slate-900 rounded-xl p-5 text-white flex justify-between items-center shadow-inner">
+                            <div>
+                                <p class="text-xs text-slate-400 font-bold uppercase tracking-wider mb-1">तय दर (Calculated Rate)</p>
+                                <p class="text-2xl font-bold">₹ <span id="display-rate">0.00</span> <span class="text-sm font-normal text-slate-300">/ लीटर</span></p>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-xs text-slate-400 font-bold uppercase tracking-wider mb-1">कुल राशि (Total Amount)</p>
+                                <p class="text-3xl font-extrabold text-green-400">₹ <span id="display-total">0.00</span></p>
+                            </div>
+                        </div>
+
+                        <!-- Save Button -->
+                        <button onclick="saveAndSend()" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold text-lg py-4 rounded-xl shadow-lg flex items-center justify-center gap-3 transition">
+                            <i data-lucide="save" class="w-6 h-6"></i> सेव करें और WhatsApp रसीद भेजें
+                        </button>
+
+                    </div>
+                </div>
+
+                <!-- Recent Collection List & Payment Ledger -->
+                <div class="glass-card flex flex-col overflow-hidden">
+                    <div class="p-5 border-b border-slate-100 flex justify-between items-center bg-white">
+                        <h3 class="font-bold text-slate-800 flex items-center gap-2 text-lg">
+                            <i data-lucide="list" class="w-5 h-5 text-dairy-600"></i>
+                            हालिया संकलन (Recent Entries)
+                        </h3>
+                        <button class="text-xs font-bold text-dairy-600 hover:text-dairy-800">सब देखें (View All)</button>
+                    </div>
+                    <div class="flex-1 overflow-x-auto">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="bg-slate-50 text-xs text-slate-500 uppercase tracking-wider border-b border-slate-200">
+                                    <th class="p-4 font-semibold">किसान (Farmer)</th>
+                                    <th class="p-4 font-semibold text-center">मात्रा (L)</th>
+                                    <th class="p-4 font-semibold text-center">फैट (FAT)</th>
+                                    <th class="p-4 font-semibold text-right">राशि (Amount)</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-sm divide-y divide-slate-100" id="recent-entries-body">
+                                <tr class="hover:bg-dairy-50 transition cursor-pointer">
+                                    <td class="p-4 font-bold text-slate-800">105 - सुरेश यादव</td>
+                                    <td class="p-4 font-medium text-slate-600 text-center">12.5</td>
+                                    <td class="p-4 font-bold text-amber-600 text-center">6.5</td>
+                                    <td class="p-4 font-bold text-green-600 text-right">₹ 737.50</td>
+                                </tr>
+                                <tr class="hover:bg-dairy-50 transition cursor-pointer">
+                                    <td class="p-4 font-bold text-slate-800">112 - मदन लाल</td>
+                                    <td class="p-4 font-medium text-slate-600 text-center">8.0</td>
+                                    <td class="p-4 font-bold text-amber-600 text-center">7.1</td>
+                                    <td class="p-4 font-bold text-green-600 text-right">₹ 505.60</td>
+                                </tr>
+                                <tr class="hover:bg-dairy-50 transition cursor-pointer">
+                                    <td class="p-4 font-bold text-slate-800">089 - राम चरण</td>
+                                    <td class="p-4 font-medium text-slate-600 text-center">15.2</td>
+                                    <td class="p-4 font-bold text-amber-600 text-center">5.8</td>
+                                    <td class="p-4 font-bold text-green-600 text-right">₹ 831.44</td>
+                                </tr>
+                                <tr class="hover:bg-dairy-50 transition cursor-pointer">
+                                    <td class="p-4 font-bold text-slate-800">045 - दिनेश पटेल</td>
+                                    <td class="p-4 font-medium text-slate-600 text-center">5.5</td>
+                                    <td class="p-4 font-bold text-amber-600 text-center">6.2</td>
+                                    <td class="p-4 font-bold text-green-600 text-right">₹ 315.15</td>
+                                </tr>
+                                <tr class="hover:bg-dairy-50 transition cursor-pointer">
+                                    <td class="p-4 font-bold text-slate-800">120 - किशन साहू</td>
+                                    <td class="p-4 font-medium text-slate-600 text-center">20.0</td>
+                                    <td class="p-4 font-bold text-amber-600 text-center">6.8</td>
+                                    <td class="p-4 font-bold text-green-600 text-right">₹ 1,224.00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- 10-Day Payment Ledger Alert -->
+            <div class="bg-gradient-to-r from-blue-600 to-dairy-700 rounded-xl p-6 text-white shadow-lg flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="flex items-center gap-4">
+                    <div class="bg-white/20 p-3 rounded-full">
+                        <i data-lucide="calendar-check" class="w-8 h-8"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold">10-दिन भुगतान चक्र (10-Day Payment Cycle)</h3>
+                        <p class="text-blue-100 text-sm mt-1">दिनांक 1 से 10 तक का भुगतान तैयार है। (Payments for 1st to 10th are ready).</p>
+                    </div>
+                </div>
+                <button class="bg-white text-dairy-800 px-6 py-3 rounded-lg font-bold shadow hover:bg-slate-50 transition whitespace-nowrap">
+                    भुगतान रजिस्टर देखें (View Ledger)
+                </button>
+            </div>
+
+            <!-- Footer -->
+            <footer class="mt-8 text-center text-xs text-slate-400 pb-4">
+                &copy; 2024 Smart Dugdh Samiti POS Demo. Created specifically for Indian Dairy Societies.
+            </footer>
+        </div>
+    </main>
+
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Auto Calculation Logic
+        function calculateRate() {
+            const volStr = document.getElementById('milk-volume').value;
+            const fatStr = document.getElementById('milk-fat').value;
+            const snfStr = document.getElementById('milk-snf').value;
+
+            const volume = parseFloat(volStr) || 0;
+            const fat = parseFloat(fatStr) || 0;
+            const snf = parseFloat(snfStr) || 0;
+
+            // Simulated Rate Formula (Simplified for Demo: FAT * 6.5 + SNF * 2.0)
+            let rate = 0;
+            if(fat > 0 && snf > 0) {
+                rate = (fat * 6.5) + (snf * 2.0);
+            }
+
+            const totalAmount = rate * volume;
+
+            document.getElementById('display-rate').innerText = rate.toFixed(2);
+            document.getElementById('display-total').innerText = totalAmount.toFixed(2);
+        }
+
+        // Save & Send WhatsApp Simulator
+        function saveAndSend() {
+            const farmer = document.getElementById('farmer-name').value;
+            const volume = document.getElementById('milk-volume').value;
+            const fat = document.getElementById('milk-fat').value;
+            const totalStr = document.getElementById('display-total').innerText;
+            const rateStr = document.getElementById('display-rate').innerText;
+
+            if(!farmer || !volume || !fat) {
+                alert("कृपया किसान का नाम, दूध की मात्रा और फैट दर्ज करें। (Please enter Farmer Name, Volume, and FAT).");
+                return;
+            }
+
+            // Update Recent Entries Table
+            const tbody = document.getElementById('recent-entries-body');
+            const newRow = document.createElement('tr');
+            newRow.className = "hover:bg-dairy-50 transition cursor-pointer bg-green-50";
+            newRow.innerHTML = `
+                <td class="p-4 font-bold text-slate-800">${farmer}</td>
+                <td class="p-4 font-medium text-slate-600 text-center">${volume}</td>
+                <td class="p-4 font-bold text-amber-600 text-center">${fat}</td>
+                <td class="p-4 font-bold text-green-600 text-right">₹ ${totalStr}</td>
+            `;
+            tbody.insertBefore(newRow, tbody.firstChild);
+
+            // Create WhatsApp Message
+            const message = `नमस्कार ${farmer} जी,\n\n*सरस्वती दुग्ध समिति* में दूध जमा करने की रसीद:\n\nपाली: सुबह\nमात्रा: ${volume} लीटर\nफैट: ${fat}%\nदर: ₹${rateStr}/लीटर\n*कुल राशि: ₹${totalStr}*\n\nधन्यवाद!`;
+            
+            // In a real app, this opens WhatsApp
+            const url = `https://wa.me/919876543210?text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
+
+            // Clear inputs
+            document.getElementById('farmer-name').value = '';
+            document.getElementById('milk-volume').value = '';
+            document.getElementById('milk-fat').value = '';
+            calculateRate();
+        }
+    </script>
+</body>
+</html>
