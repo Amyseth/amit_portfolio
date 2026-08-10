@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   // Inject the chat widget HTML structure into the body
   const chatWidgetHTML = `
     <div id="codencraft-chat-widget">
@@ -32,26 +32,26 @@ document.addEventListener('DOMContentLoaded', () => {
     </div>
   `;
 
-  document.body.insertAdjacentHTML('beforeend', chatWidgetHTML);
+  document.body.insertAdjacentHTML("beforeend", chatWidgetHTML);
 
   // Selectors
-  const toggleBtn = document.getElementById('chat-toggle-btn');
-  const closeBtn = document.getElementById('close-chat-btn');
-  const chatWindow = document.getElementById('chat-window');
-  const chatBody = document.getElementById('chat-body');
-  const chatInput = document.getElementById('chat-input');
-  const sendBtn = document.getElementById('chat-send-btn');
+  const toggleBtn = document.getElementById("chat-toggle-btn");
+  const closeBtn = document.getElementById("close-chat-btn");
+  const chatWindow = document.getElementById("chat-window");
+  const chatBody = document.getElementById("chat-body");
+  const chatInput = document.getElementById("chat-input");
+  const sendBtn = document.getElementById("chat-send-btn");
 
   // API URL - Update this when deployed to Render/Heroku
-  const API_URL = 'http://localhost:8000/chat';
+  const API_URL = "https://sales-agent-backend-bryr.onrender.com";
 
   // Chat History Array
   let chatHistory = [];
 
   // Toggle chat window
   const toggleChat = () => {
-    chatWindow.classList.toggle('active');
-    if (chatWindow.classList.contains('active')) {
+    chatWindow.classList.toggle("active");
+    if (chatWindow.classList.contains("active")) {
       toggleBtn.innerHTML = '<i class="fa-solid fa-times"></i>';
       chatInput.focus();
     } else {
@@ -59,15 +59,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  toggleBtn.addEventListener('click', toggleChat);
-  closeBtn.addEventListener('click', () => {
-    chatWindow.classList.remove('active');
+  toggleBtn.addEventListener("click", toggleChat);
+  closeBtn.addEventListener("click", () => {
+    chatWindow.classList.remove("active");
     toggleBtn.innerHTML = '<i class="fa-solid fa-message"></i>';
   });
 
   // Append a message to the UI
   const appendMessage = (role, text) => {
-    const msgDiv = document.createElement('div');
+    const msgDiv = document.createElement("div");
     msgDiv.className = `chat-message ${role}`;
     msgDiv.textContent = text;
     chatBody.appendChild(msgDiv);
@@ -76,9 +76,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Show typing indicator
   const showTyping = () => {
-    const typingDiv = document.createElement('div');
-    typingDiv.className = 'chat-message ai typing-indicator-container';
-    typingDiv.id = 'typing-indicator';
+    const typingDiv = document.createElement("div");
+    typingDiv.className = "chat-message ai typing-indicator-container";
+    typingDiv.id = "typing-indicator";
     typingDiv.innerHTML = `
       <div class="typing-indicator">
         <div class="typing-dot"></div>
@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Remove typing indicator
   const hideTyping = () => {
-    const el = document.getElementById('typing-indicator');
+    const el = document.getElementById("typing-indicator");
     if (el) el.remove();
   };
 
@@ -102,38 +102,40 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!text) return;
 
     // Disable input while processing
-    chatInput.value = '';
+    chatInput.value = "";
     chatInput.disabled = true;
     sendBtn.disabled = true;
 
     // Add user message to UI and history
-    appendMessage('user', text);
-    chatHistory.push({ role: 'user', content: text });
-    
+    appendMessage("user", text);
+    chatHistory.push({ role: "user", content: text });
+
     showTyping();
 
     try {
       const response = await fetch(API_URL, {
-        method: 'POST',
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json'
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify({ history: chatHistory })
+        body: JSON.stringify({ history: chatHistory }),
       });
 
-      if (!response.ok) throw new Error('API Error');
+      if (!response.ok) throw new Error("API Error");
 
       const data = await response.json();
       const aiResponse = data.response;
 
       hideTyping();
-      appendMessage('ai', aiResponse);
-      chatHistory.push({ role: 'model', content: aiResponse });
-
+      appendMessage("ai", aiResponse);
+      chatHistory.push({ role: "model", content: aiResponse });
     } catch (error) {
-      console.error('Chat error:', error);
+      console.error("Chat error:", error);
       hideTyping();
-      appendMessage('ai', 'Sorry, my server is currently offline for maintenance. Please email aseth230@gmail.com directly!');
+      appendMessage(
+        "ai",
+        "Sorry, my server is currently offline for maintenance. Please email aseth230@gmail.com directly!",
+      );
       // Remove the failed user message from history so it doesn't break future attempts
       chatHistory.pop();
     } finally {
@@ -143,8 +145,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  sendBtn.addEventListener('click', sendMessage);
-  chatInput.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') sendMessage();
+  sendBtn.addEventListener("click", sendMessage);
+  chatInput.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") sendMessage();
   });
 });
