@@ -22,23 +22,12 @@ function initTheme() {
   const themeToggle = document.getElementById('themeToggle');
   const body = document.body;
 
-  const savedTheme = localStorage.getItem('theme');
-  const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  // Always force dark theme for CodeNCraft brand
+  body.classList.remove('light-theme');
+  body.classList.add('dark-theme');
+  localStorage.setItem('theme', 'dark');
 
-  if (savedTheme === 'light') {
-    body.classList.remove('dark-theme');
-    body.classList.add('light-theme');
-  } else if (savedTheme === 'dark') {
-    body.classList.remove('light-theme');
-    body.classList.add('dark-theme');
-  } else {
-    if (systemPrefersDark) {
-      body.classList.add('dark-theme');
-    } else {
-      body.classList.add('light-theme');
-    }
-  }
-
+  // Keep toggle button functional for fun, but default to dark
   themeToggle.addEventListener('click', () => {
     if (body.classList.contains('dark-theme')) {
       body.classList.remove('dark-theme');
