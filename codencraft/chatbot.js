@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const sendBtn = document.getElementById("chat-send-btn");
 
   // API URL - Update this when deployed to Render/Heroku
-  const API_URL = "https://sales-agent-backend-bryr.onrender.com";
+  const API_URL = "https://sales-agent-backend-bryr.onrender.com/chat";
 
   // Chat History Array
   let chatHistory = [];
