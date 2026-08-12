@@ -701,12 +701,6 @@ body.light-theme .hero-badge {
   font-weight: bold;
 }
 
-.badge-orange {
-  background: rgba(243, 156, 18, 0.15);
-  color: var(--accent-warm);
-  border-color: rgba(243, 156, 18, 0.3);
-}
-
 /* ==========================================================================
    Bespoke Tiered Services (Freelance Custom Packages)
    ========================================================================== */
