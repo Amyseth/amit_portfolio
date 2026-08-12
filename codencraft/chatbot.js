@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+const initCodeNCraftAgent = () => {
   // Inject the chat widget HTML structure into the body
   const chatWidgetHTML = `
     <div id="codencraft-chat-widget">
@@ -149,4 +149,10 @@ document.addEventListener("DOMContentLoaded", () => {
   chatInput.addEventListener("keypress", (e) => {
     if (e.key === "Enter") sendMessage();
   });
-});
+};
+
+if (document.readyState === 'loading') {
+  document.addEventListener("DOMContentLoaded", initCodeNCraftAgent);
+} else {
+  initCodeNCraftAgent();
+}
