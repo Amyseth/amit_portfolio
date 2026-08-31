@@ -84,6 +84,8 @@ const initCodeNCraftAgent = () => {
   let isFinishedStreaming = false;
   let callActive = false;
   let currentAiTranscript = "";
+  let speechDebounceTimer = null;
+  let accumulatedSpeech = "";
 
   // Base64 helper
   const base64ToArrayBuffer = (base64) => {
@@ -291,6 +293,12 @@ const initCodeNCraftAgent = () => {
     stopAllAudio();
     stopSpeechRecognition();
 
+    if (speechDebounceTimer) {
+      clearTimeout(speechDebounceTimer);
+      speechDebounceTimer = null;
+    }
+    accumulatedSpeech = "";
+
     if (ws) {
       if (ws.readyState === WebSocket.OPEN) {
         ws.close();
@@ -355,10 +363,12 @@ const initCodeNCraftAgent = () => {
           }
         }
 
+        const currentSpeech = (finalTranscript || interimTranscript).trim();
+        if (!currentSpeech) return;
+
         // Interruption
-        if ((interimTranscript.trim() || finalTranscript.trim()) && 
-            (voiceStatusText.textContent.toLowerCase() === "speaking" || 
-             voiceStatusText.textContent.toLowerCase() === "thinking")) {
+        const currentStatus = voiceStatusText.textContent.toLowerCase();
+        if (currentSpeech && (currentStatus === "speaking" || currentStatus === "thinking")) {
           console.log("Interrupted by user speech");
           updateVoiceStatus("listening");
           if (ws && ws.readyState === WebSocket.OPEN) {
@@ -367,15 +377,26 @@ const initCodeNCraftAgent = () => {
           stopAllAudio();
         }
 
-        if (finalTranscript.trim()) {
-          const text = finalTranscript.trim();
-          voiceTranscript.textContent = "You: " + text;
+        // Accumulate and display the active speech
+        accumulatedSpeech = currentSpeech;
+        voiceTranscript.textContent = "You: " + accumulatedSpeech;
+
+        // Reset the silence debounce timer
+        if (speechDebounceTimer) clearTimeout(speechDebounceTimer);
+        
+        // Wait 1.0 second of silence before triggering the API request
+        speechDebounceTimer = setTimeout(() => {
+          if (!accumulatedSpeech.trim()) return;
+          
+          const text = accumulatedSpeech.trim();
+          accumulatedSpeech = "";
           updateVoiceStatus("thinking");
           stopSpeechRecognition();
+          
           if (ws && ws.readyState === WebSocket.OPEN) {
             ws.send(JSON.stringify({ type: "user-message", text }));
           }
-        }
+        }, 1000);
       };
 
       recognition.onend = () => {
