@@ -220,7 +220,10 @@ const initCodeNCraftAgent = () => {
 
     // Connect to WebSocket Server (port 8000)
     const protocol = window.location.protocol === "https:" ? "wss:" : "ws:";
-    const host = window.location.hostname;
+    let host = window.location.hostname;
+    if (!host || host === "") {
+      host = "127.0.0.1";
+    }
     const wsUrl = `${protocol}//${host}:8000/ws/voice-call`;
     ws = new WebSocket(wsUrl);
 
