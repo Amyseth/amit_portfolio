@@ -350,6 +350,22 @@ const initCodeNCraftAgent = () => {
       recognition.interimResults = true;
       recognition.lang = "en-US";
 
+      recognition.onstart = () => {
+        console.log("Speech recognition active");
+      };
+
+      recognition.onerror = (event) => {
+        console.error("Speech recognition error:", event.error);
+        if (event.error === "not-allowed") {
+          voiceTranscript.textContent = "Microphone access denied. Please click the mic icon in your browser URL bar and allow access.";
+          endVoiceCall();
+        } else if (event.error === "no-speech") {
+          // Ignore no-speech silence timeouts
+        } else {
+          voiceTranscript.textContent = "Mic Error: " + event.error;
+        }
+      };
+
       recognition.onresult = (event) => {
         let interimTranscript = "";
         let finalTranscript = "";
