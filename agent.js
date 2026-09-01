@@ -399,7 +399,7 @@ const initCodeNCraftAgent = () => {
         // Reset the silence debounce timer
         if (speechDebounceTimer) clearTimeout(speechDebounceTimer);
         
-        // Wait 1.0 second of silence before triggering the API request
+        // Wait 400ms of silence before triggering the API request (natural conversational pause)
         speechDebounceTimer = setTimeout(() => {
           if (!accumulatedSpeech.trim()) return;
           
@@ -411,7 +411,7 @@ const initCodeNCraftAgent = () => {
           if (ws && ws.readyState === WebSocket.OPEN) {
             ws.send(JSON.stringify({ type: "user-message", text }));
           }
-        }, 1000);
+        }, 400);
       };
 
       recognition.onend = () => {
