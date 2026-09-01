@@ -235,7 +235,6 @@ const initCodeNCraftAgent = () => {
       switch (data.type) {
         case "ai-transcript-chunk":
           updateVoiceStatus("speaking");
-          stopSpeechRecognition();
           currentAiTranscript += data.text;
           voiceTranscript.textContent = currentAiTranscript;
           break;
@@ -250,7 +249,6 @@ const initCodeNCraftAgent = () => {
           currentAiTranscript = "";
           if (activeSources.length === 0) {
             updateVoiceStatus("listening");
-            startSpeechRecognition();
           }
           break;
 
@@ -258,7 +256,6 @@ const initCodeNCraftAgent = () => {
           stopAllAudio();
           currentAiTranscript = "";
           updateVoiceStatus("listening");
-          startSpeechRecognition();
           break;
 
         case "error":
@@ -406,7 +403,6 @@ const initCodeNCraftAgent = () => {
           const text = accumulatedSpeech.trim();
           accumulatedSpeech = "";
           updateVoiceStatus("thinking");
-          stopSpeechRecognition();
           
           if (ws && ws.readyState === WebSocket.OPEN) {
             ws.send(JSON.stringify({ type: "user-message", text }));
@@ -415,7 +411,7 @@ const initCodeNCraftAgent = () => {
       };
 
       recognition.onend = () => {
-        if (callActive && voiceStatusText.textContent.toLowerCase() === "listening") {
+        if (callActive) {
           try { recognition.start(); } catch(e) {}
         }
       };
@@ -467,7 +463,6 @@ const initCodeNCraftAgent = () => {
         activeSources = activeSources.filter(s => s !== source);
         if (activeSources.length === 0 && isFinishedStreaming) {
           updateVoiceStatus("listening");
-          startSpeechRecognition();
         }
       };
     } catch(e) {
